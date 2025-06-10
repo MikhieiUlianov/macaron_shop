@@ -3,6 +3,7 @@
 @use "./ui/inputs.scss";
 
 @import "@/assets/fonts.css";
+@import "@/assets/fontello.css";
 @import "./mixins.scss";
 @import "./variables.scss";
 
@@ -49,8 +50,16 @@ h4,
 h5 {
   font-family: "Montserrat", sans-serif;
 }
+$pink: rgba(255, 192, 203, 0.05); // barely visible pink
+
 body {
-  background: transparent;
+  background-image: repeating-linear-gradient(
+    to right,
+    $pink,
+    $pink 5px,
+    transparent 5px,
+    transparent calc(100% / 12)
+  );
 }
 
 ul {
@@ -60,6 +69,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: $dark;
+}
+
+span {
+  color: $dark;
 }
 
 button {
@@ -85,6 +99,10 @@ button {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  body {
+    background-image: none;
+    background: transparent;
   }
 }
 

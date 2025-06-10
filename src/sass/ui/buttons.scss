@@ -1,2 +1,60 @@
 @use "../mixins.scss" as *;
 @use "../variables.scss" as *;
+
+.btn {
+  @include button;
+  width: 201px;
+  height: 50px;
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid $pink;
+    background: transparent;
+    color: $pink;
+  }
+}
+
+.btnHoverBarely {
+  @include button;
+  width: 254px;
+  height: 50px;
+  &:hover {
+    background: $pink-hovered;
+  }
+}
+
+.pagination {
+  border: 1px solid rgba(41, 41, 41, 0.1);
+  background: rgb(255, 255, 255);
+
+  &:hover {
+    background: rgb(236, 238, 241);
+  }
+  .active {
+    background: rgb(231, 66, 106);
+  }
+}
+
+.calculate {
+  border: 1px solid rgba(41, 41, 41, 0.1);
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  &:hover {
+    background: rgb(236, 238, 241);
+  }
+}
+
+.close {
+  background: rgb(41, 41, 41);
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.cart {
+  color: $dark;
+  &:hover {
+    color: $pink;
+  }
+}

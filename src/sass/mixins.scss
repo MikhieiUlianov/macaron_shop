@@ -3,3 +3,13 @@
 @mixin title {
   color: $dark;
 }
+
+@mixin button {
+  display: flex;
+  transition: all 0.3s;
+  flex-direction: column;
+  place-content: center;
+  color: white;
+  border-radius: 3px;
+  background: $pink;
+}

@@ -1,0 +1,131 @@
+.menu {
+  padding: 20px;
+  position: fixed;
+  left: -100%;
+  visibility: hidden;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  z-index: 3;
+  transition: 0.5s all;
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &.active {
+    background: $almond;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__towns {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    &-list-content {
+      display: none;
+
+      &.active {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        width: 200px;
+
+        .menu__towns-list-item {
+          height: 50px;
+          padding-top: 15px;
+          text-align: center;
+          background: rgb(247, 235, 229);
+          border-bottom: 1px solid rgb(236, 199, 180);
+          cursor: pointer;
+
+          &:hover {
+            background: rgb(236, 199, 180);
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-item {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      display: flex;
+      padding: 12px;
+      border-bottom: $line;
+      cursor: pointer;
+
+      div {
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+
+        &:hover {
+          border-bottom-color: $pink;
+        }
+      }
+
+      &-sale {
+        background: $pink;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        padding: 4px;
+      }
+
+      &:nth-child(1) {
+        border-top: $line;
+      }
+    }
+  }
+
+  &__subButtons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &-button {
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+
+      &:hover {
+        border-bottom-color: $pink;
+      }
+    }
+  }
+
+  &__tel {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}

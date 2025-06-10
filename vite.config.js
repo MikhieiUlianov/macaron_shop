@@ -32,7 +32,11 @@ export default defineConfig({
         {
           // ✅ Auto-import Redux hooks
           "react-redux": ["useDispatch", "useSelector"],
-
+          "@reduxjs/toolkit": [
+            "createSlice",
+            "createEntityAdapter",
+            "configureStore",
+          ],
           /* FOR NAMED EXPORT ONLY */
           // ✅ Your custom utility functions (in src/utils/formatDate.ts etc.)
           "@/utils": ["formatDate", "capitalize"],
@@ -44,7 +48,7 @@ export default defineConfig({
       // ✅ Auto-import everything from files inside:
       // src/hooks/*.ts and src/utils/*.ts
       // Both default exports and named exports
-      dirs: ["src/hooks", "src/utils"],
+      /*    dirs: ["src/hooks", "src/utils", "src/services"], */
 
       // ✅ Generate auto-import TypeScript declarations for IDE support
       dts: "./auto-imports.d.ts",

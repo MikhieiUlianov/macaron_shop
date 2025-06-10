@@ -1,0 +1,143 @@
+.footer {
+  background: $gray;
+
+  &__info {
+    display: none;
+  }
+
+  &__wrapper {
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
+    &-step {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__subBlock {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__cop {
+    text-align: center;
+    width: 173px;
+  }
+
+  &__time {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+
+  &__social {
+    margin-top: 25px;
+    padding-bottom: 53px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    &-item {
+      background-color: #fff;
+      border-radius: 100%;
+      width: 34px;
+      height: 34px;
+      place-content: center;
+      place-items: center;
+      padding-left: 3px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__steps {
+      flex-direction: row;
+      &-step {
+        align-items: center;
+      }
+    }
+
+    &__cop {
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    &__wrapper {
+      position: relative;
+      padding: 58px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: nowrap;
+    }
+
+    &__info {
+      display: flex;
+      gap: 30px;
+
+      &-block {
+        display: flex;
+        flex-direction: column;
+
+        &-items {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+    &__steps {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 17px;
+      &-step {
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+      }
+    }
+
+    &__time {
+      position: absolute;
+      top: 55px;
+      right: 0;
+    }
+
+    &__cop {
+      width: auto;
+      text-align: left;
+    }
+
+    &__subBlock {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    &__social {
+      justify-content: end;
+      position: absolute;
+      right: 0;
+      top: 172px;
+    }
+  }
+}

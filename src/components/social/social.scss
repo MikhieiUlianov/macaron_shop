@@ -1,0 +1,14 @@
+.social-list {
+  &-item {
+    .social-icon {
+      font-size: 20px;
+    }
+    padding: 0px;
+    &:hover {
+      .social-icon {
+        color: $pink;
+        display: block;
+      }
+    }
+  }
+}
