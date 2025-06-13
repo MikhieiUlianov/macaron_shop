@@ -16,7 +16,18 @@ const useMacaronService = () => {
     },
     [request]
   );
-  return { process, setProcess, getData, postData, clearError };
+
+  const getCatalog = useCallback(
+    async (endpoint, start = 0, offset = 6) => {
+      const res = await request(
+        `http://localhost:5000/${endpoint}?_start=${start}&_limit=${offset}`
+      );
+      return res;
+    },
+    [request]
+  );
+
+  return { process, setProcess, getData, postData, getCatalog, clearError };
 };
 
 export default useMacaronService;

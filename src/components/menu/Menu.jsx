@@ -4,13 +4,21 @@ import {
   setActiveMenu,
   changeActiveTown,
   changeActiveTownAccordion,
+  changeActiveCatalog,
+  changeActiveCatalogAccordion,
 } from "../header/headerSlice";
 import "./menu.scss";
 
 const Menu = () => {
-  const { activeMenu, activeTown, towns, activeTownAccordion } = useSelector(
-    (state) => state.header
-  );
+  const {
+    activeMenu,
+    activeTown,
+    activeCatalog,
+    towns,
+    catalog,
+    activeTownAccordion,
+    activeCatalogAccordion,
+  } = useSelector((state) => state.header);
   const dispatch = useDispatch();
 
   const buttons = [
@@ -19,7 +27,6 @@ const Menu = () => {
     { label: "собрать набор", img: "/icons/sale.svg" },
     { label: "создать дизайн" },
     { label: "компаниям" },
-    { label: "весь каталог" },
   ];
 
   const subButtons = [
@@ -74,6 +81,26 @@ const Menu = () => {
             )}
           </li>
         ))}
+        <li className="menu__wrapper-item fw-400 fz-14">
+          <div
+            className="menu__wrapper-item-name"
+            onClick={() => dispatch(changeActiveCatalogAccordion())}
+          >
+            {activeCatalog}
+          </div>
+          <ul
+            className={`menu__wrapper-item-catalog ${
+              activeCatalogAccordion ? "active" : ""
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {catalog.map((cat) => (
+              <li key={cat} onClick={() => dispatch(changeActiveCatalog(cat))}>
+                {cat}
+              </li>
+            ))}
+          </ul>
+        </li>
       </ul>
 
       <ul className="menu__subButtons">

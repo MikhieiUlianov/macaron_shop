@@ -1,0 +1,132 @@
+.news {
+  margin-top: 60px;
+  position: relative;
+
+  &__wrapper {
+    margin-top: 20px;
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__slide {
+    height: 270px; // mobile height
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  &__slide-img {
+    height: 101px;
+    object-fit: cover;
+    width: 100%;
+    max-width: 140px;
+
+    border: 1px solid #ededf0;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__slide-content {
+    width: 100%;
+    max-width: 140px;
+    border-left: 1px solid #ededf0;
+    border-right: 1px solid #ededf0;
+    border-top: 1px solid #ededf0;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  &__slide-date,
+  &__slide-title,
+  &__slide-text {
+    text-align: left;
+  }
+
+  .swiper-pagination-bullets {
+    bottom: -35px;
+    display: flex;
+    justify-content: center;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      border-radius: 0%;
+      border: 2px solid gray;
+      background: white;
+
+      &-active {
+        background: $pink;
+        border: none;
+      }
+    }
+  }
+  &__button {
+    display: block;
+    margin: 55px auto 0 auto;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    width: 130px;
+    min-height: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .news {
+    margin-top: 85px;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__wrapper {
+      margin-top: 40px;
+    }
+
+    &__slide {
+      height: 420px;
+    }
+
+    &__slide-img {
+      height: 210px;
+      max-width: 370px;
+    }
+
+    &__slide-content {
+      max-width: 370px;
+      padding: 20px;
+    }
+
+    &__slide-date {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    &__slide-title {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    &__slide-text {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .news {
+    .swiper-pagination-bullets {
+      justify-content: flex-end;
+    }
+    &__button {
+      display: block;
+      margin: 55px auto 0 auto;
+      border: 1px solid $blue;
+      border-radius: 3px;
+      width: 189px;
+      min-height: 52px;
+    }
+  }
+}

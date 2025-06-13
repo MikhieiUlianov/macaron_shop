@@ -1,0 +1,132 @@
+.promo {
+  position: relative;
+
+  &__spots {
+    position: absolute;
+    &-pink {
+      left: -50px;
+      bottom: -50px;
+      z-index: -1;
+    }
+    &-green {
+      display: none;
+    }
+    &-orange {
+      display: none;
+    }
+    &-yellow {
+      display: none;
+    }
+    &-blue {
+      right: 0px;
+      top: -100px;
+      z-index: -1;
+    }
+  }
+  &__title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $dark;
+
+    .promo__title-main {
+      text-transform: uppercase;
+    }
+    &-divider {
+      width: 29px;
+      display: block;
+      height: 1.5px;
+      background: rgb(0, 0, 0);
+      margin: 0 5px;
+    }
+
+    &-subTitle {
+      color: $dark;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 40px;
+
+    &-block {
+      display: grid;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+
+  &__img {
+    width: 216px;
+    height: 216px;
+    margin: 44px auto 0 auto;
+    z-index: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .promo {
+    &__spots {
+      &-pink {
+        left: -150px;
+        bottom: -50px;
+      }
+      &-green {
+        display: block;
+        right: -20px;
+        top: -100px;
+      }
+      &-yellow {
+        display: block;
+        right: -20px;
+        bottom: 0px;
+        width: 264px;
+        height: 264px;
+      }
+      &-orange {
+        display: block;
+        right: 50px;
+        bottom: -0px;
+      }
+      &-blue {
+        left: -50px;
+        top: -150px;
+      }
+    }
+    &__subTitle {
+      margin-top: 22px;
+      font-size: 42px;
+    }
+
+    &__text {
+      margin-top: 13px;
+      font-size: 18px;
+    }
+    &__img {
+      margin: 0;
+      width: 422.01px;
+      height: 422.01px;
+    }
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      &-block {
+        order: 0;
+      }
+
+      &-block:nth-of-type(2) {
+        order: 1;
+      }
+
+      &-block:nth-of-type(1) {
+        order: 2;
+        margin-right: 100px;
+      }
+    }
+  }
+}

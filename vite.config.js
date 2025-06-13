@@ -19,7 +19,29 @@ export default defineConfig({
         // useCallback, useReducer, useLayoutEffect, useImperativeHandle,
         // useDebugValue, useId, useSyncExternalStore,
         // Fragment, createElement, cloneElement, isValidElement, Children
-        "react",
+        {
+          react: [
+            "useState",
+            "useEffect",
+            "useContext",
+            "useRef",
+            "useMemo",
+            "useCallback",
+            "useReducer",
+            "useLayoutEffect",
+            "useImperativeHandle",
+            "useDebugValue",
+            "useId",
+            "useSyncExternalStore",
+            "Fragment",
+            "createElement",
+            "cloneElement",
+            "isValidElement",
+            "Children",
+            "Suspense",
+            "lazy",
+          ],
+        },
 
         // ✅ Auto-import from "react-router-dom":
         // useNavigate, useParams, useLocation, useSearchParams, useMatch,

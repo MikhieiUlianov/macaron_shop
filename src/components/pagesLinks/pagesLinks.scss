@@ -1,0 +1,120 @@
+.pagesLinks {
+  margin-top: 30px;
+  &__blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  &__block {
+    &-circle {
+      display: none;
+    }
+    &-text {
+      display: none;
+    }
+    &-img {
+      display: none;
+    }
+    &-subBlock {
+      border-bottom: 2px solid $gray;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .pagesLinks {
+    margin-top: 40px;
+
+    &__blocks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 30px;
+    }
+    &__block {
+      width: 570px;
+      height: 260px;
+      align-items: center;
+      padding: 35px 55px;
+      position: relative;
+
+      &-circle {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background: white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &-text {
+        display: block;
+        margin-top: 10px;
+      }
+      &-img {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        padding-top: 20px;
+      }
+
+      &-subBlock {
+        margin-top: 30px;
+        gap: 13px;
+        justify-content: center;
+        border: none;
+        padding: 0;
+
+        &-title {
+          font-size: 20px;
+        }
+      }
+
+      &.orange {
+        background: linear-gradient(
+          156deg,
+          rgba(255, 219, 195, 0.8) 50%,
+          rgba(255, 219, 195, 1) 50%
+        );
+      }
+      &.pink {
+        background: linear-gradient(
+          -156deg,
+          rgb(255, 194, 204, 0.8) 50%,
+          rgb(255, 194, 204, 1) 50%
+        );
+      }
+      &.green {
+        background: linear-gradient(
+          24deg,
+          rgb(180, 234, 179, 0.8) 50%,
+          rgb(180, 234, 179, 1) 50%
+        );
+      }
+      &.salmon {
+        background: linear-gradient(
+          -24deg,
+          rgb(253, 213, 205, 0.8) 50%,
+          rgb(253, 213, 205, 1) 50%
+        );
+      }
+      &.blue {
+        background: linear-gradient(
+          156deg,
+          rgb(168, 220, 223, 0.8) 50%,
+          rgb(168, 220, 223, 1) 50%
+        );
+      }
+      &.purple {
+        background: linear-gradient(
+          -156deg,
+          rgb(196, 198, 236, 0.8) 50%,
+          rgb(196, 198, 236, 1) 50%
+        );
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ const initialState = {
   activeCatalog: "ВЕСЬ КАТАЛОГ",
   activeMenu: false,
   towns: ["Санкт-Петербург", "Москва", "Калининград", "Ярославль"],
+  catalog: ["Пирожные макарон", "Эклеры", "Вафельные трубочки", "Профитроли"],
 };
 
 const headerSlice = createSlice({

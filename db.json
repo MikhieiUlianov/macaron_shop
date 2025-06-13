@@ -41,5 +41,257 @@
         "links": ["Корпоративные подарки", "Для юридических лиц", "Оповикам"]
       }
     ]
-  }
+  },
+  "pagesLinks": [
+    {
+      "img": "/icons/pagesLinks/ready-made-sets.svg",
+      "alt": "ready-made-sets",
+      "title": "Готовые наборы",
+      "text": "Готовые наборы со скидкой. <br/>Вы можете подобрать набор на подходящий случай.",
+      "colorClass": "orange"
+    },
+    {
+      "img": "/icons/pagesLinks/custom-set.svg",
+      "alt": "custom-set",
+      "title": "Собрать свой набор",
+      "text": "Выбрать количество макарун, и выбрать вкусы",
+      "colorClass": "pink"
+    },
+    {
+      "img": "/icons/pagesLinks/custom-design.svg",
+      "alt": "custom-design",
+      "title": "Набор с индивидуальной печатью",
+      "text": "Собрать набор макарон с уникальным дизайном. ",
+      "colorClass": "green"
+    },
+    {
+      "img": "/icons/pagesLinks/weeding.svg",
+      "alt": "weeding",
+      "title": "Свадебные предложения",
+      "text": "Нежные пирожные макаронс с разными вкусами для украшения вашего свадебного торжества",
+      "colorClass": "salmon"
+    },
+    {
+      "img": "/icons/pagesLinks/corporate-gift.svg",
+      "alt": "corporate",
+      "title": "Корпоративные подарки",
+      "text": "От 85 руб за шт. С уникальным дизайном. <br/>Приятный комплимент для коллег и партнеров",
+      "colorClass": "blue"
+    },
+    {
+      "img": "/icons/pagesLinks/wholesale.svg",
+      "alt": "delivery",
+      "title": "Оптовые поставки",
+      "text": "Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы.",
+      "colorClass": "purple"
+    }
+  ],
+  "promotionSlides": [
+    {
+      "label": "новинка",
+      "img": "/img/promotion/chocolate-cake.jpeg",
+      "alt": "chocolate-cake",
+      "text": "Шоколадное пирожное картошка на основе бисквита!"
+    },
+    {
+      "label": "сладкая новинка",
+      "img": "/img/promotion/caramel-candy.jpeg",
+      "alt": "caramel-candy",
+      "text": "Карамель на палочке <br/> из натуральных ингредиентов"
+    },
+    {
+      "label": "новинка",
+      "img": "/img/promotion/delicious-candies.jpeg",
+      "alt": "delicious-candy",
+      "text": "Аппетитные конфеты <br/> на основе миндального печенья и крема"
+    },
+    {
+      "label": "новинка",
+      "img": "/img/promotion/delicious-candies.jpeg",
+      "alt": "delicious-candy",
+      "text": "Аппетитные конфеты <br/> на основе миндального печенья и крема"
+    },
+    {
+      "label": "бесплатная доставка",
+      "img": "/img/promotion/free-delivery.jpeg",
+      "alt": "free-delivery",
+      "text": "По СПб в районе КАД –  от 3000₽ <br/> По МСК – от 5000₽"
+    }
+  ],
+  "holidays": [
+    {
+      "img": "/img/holidays/macaron-yellow-hol.png",
+      "alt": "macaron-yellow",
+      "text": "Скоро<br/>День рождения<br/>близкого человека "
+    },
+    {
+      "img": "/img/holidays/macaron-pink-hol.png",
+      "alt": "macaron-pink",
+      "text": "1 января<br/>Новый Год<br/>2021"
+    },
+    {
+      "img": "/img/holidays/macaron-blue-hol.png",
+      "alt": "macaron-blue",
+      "text": "14 февраля<br/>День Святого<br/>Валентина"
+    },
+    {
+      "img": "/img/holidays/macaron-yellow-hol.png",
+      "alt": "macaron-yellow",
+      "text": "23 февраля<br/>День Защитника<br/>Отечества"
+    },
+    {
+      "img": "/img/holidays/macaron-pink-hol.png",
+      "alt": "macaron-pink",
+      "text": "8 марта<br/>Международный<br/>Женский День"
+    },
+    {
+      "img": "/img/holidays/macaron-blue-hol.png",
+      "alt": "macaron-blue",
+      "text": "9 марта<br/>День Сурка"
+    }
+  ],
+  "popularSets": [
+    {
+      "id": "a1f5c9e8-34b2-4f1a-9cde-8f2a7d5b3f11",
+      "img": "/img/popularSets/set-16.jpeg",
+      "alt": "Heart Set",
+      "title": "Набор на 16",
+      "text": "Набор 16 шт. Вкусы: соленая карамель, голубой сыр, пармезан, шоколад ",
+      "price": "1500 руб"
+    },
+    {
+      "id": "b24f9a72-efa6-4e3b-8c18-9bd4a6c09124",
+      "img": "/img/popularSets/set-9.jpeg",
+      "alt": "set-9",
+      "title": "Набор на 9",
+      "text": "Набор из 9 штук в квадратной коробке. Вкусы: шоколад, фисташка, вишня",
+      "price": "950 руб"
+    },
+    {
+      "id": "c9e3a713-75d4-42bf-982a-3e0b4c0a321f",
+      "img": "/img/popularSets/heart.jpeg",
+      "alt": "heart",
+      "title": "Сердце",
+      "text": "24 штуки в коробке в виде сердца. Ассорти из 6 вкусов",
+      "price": "2800 руб"
+    },
+    {
+      "id": "df7b3e9-1f4a-4cfa-ae71-4c1235f67890",
+      "img": "/img/popularSets/roundSet.jpeg",
+      "alt": "roundSet",
+      "title": "Круглый набор",
+      "text": "40 макаронс в круглой коробке с персональной надписью",
+      "price": "3900 руб"
+    },
+    {
+      "id": "c9e3a713-75d4-42bf-982a-3eb4c0a321f",
+      "img": "/img/popularSets/heart.jpeg",
+      "alt": "heart",
+      "title": "Сердце",
+      "text": "24 штуки в коробке в виде сердца. Ассорти из 6 вкусов",
+      "price": "2800 руб"
+    },
+    {
+      "id": "d3f7b3e9-1f4a-4cfa-ae71-4c1235f67890",
+      "img": "/img/popularSets/roundSet.jpeg",
+      "alt": "roundSet",
+      "title": "Круглый набор",
+      "text": "40 макаронс в круглой коробке с персональной надписью",
+      "price": "3900 руб"
+    },
+    {
+      "id": "c9e3a713-75d4-42bf-982a-3e0b4c0321f",
+      "img": "/img/popularSets/heart.jpeg",
+      "alt": "heart",
+      "title": "Сердце",
+      "text": "24 штуки в коробке в виде сердца. Ассорти из 6 вкусов",
+      "price": "2800 руб"
+    },
+    {
+      "id": "d3fb3e9-1f4a-4cfa-ae71-4c1235f67890",
+      "img": "/img/popularSets/roundSet.jpeg",
+      "alt": "roundSet",
+      "title": "Круглый набор",
+      "text": "40 макаронс в круглой коробке с персональной надписью",
+      "price": "3900 руб"
+    },
+    {
+      "id": "d3fb3e9-1f4a-4cfa-ae71-4c1235f6890",
+      "img": "/img/popularSets/roundSet.jpeg",
+      "alt": "roundSet",
+      "title": "Круглый набор",
+      "text": "40 макаронс в круглой коробке с персональной надписью",
+      "price": "3900 руб"
+    }
+  ],
+  "news": [
+    {
+      "img": "/img/news/valentine's.jpeg",
+      "alt": "valentine's day",
+      "date": "11.02.2023",
+      "title": "Экспресс-конкурс ко дню Святого Валентина",
+      "text": "Подарок уже через 2 дня. День всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп"
+    },
+    {
+      "img": "/img/news/event.jpeg",
+      "alt": "event",
+      "date": "23.03.2023",
+      "title": "Конкурс на 23 февраля!",
+      "text": "День Защитника Отечества уже совсем скоро! Порадуйте своего сладкоежку с помощью аппетитных наборов от МакаронШоп"
+    },
+    {
+      "img": "/img/news/macarons.jpeg",
+      "alt": "macarons",
+      "date": "10.04.2023",
+      "title": "Скоро главный праздник весны!",
+      "text": "Девушки любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы"
+    },
+    {
+      "img": "/img/news/valentine's.jpeg",
+      "alt": "valentine's day",
+      "date": "11.02.2023",
+      "title": "Экспресс-конкурс ко дню Святого Валентина",
+      "text": "Подарок уже через 2 дня. День всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп"
+    },
+    {
+      "img": "/img/news/event.jpeg",
+      "alt": "event",
+      "date": "23.03.2023",
+      "title": "Конкурс на 23 февраля!",
+      "text": "День Защитника Отечества уже совсем скоро! Порадуйте своего сладкоежку с помощью аппетитных наборов от МакаронШоп"
+    },
+    {
+      "img": "/img/news/macarons.jpeg",
+      "alt": "macarons",
+      "date": "10.04.2023",
+      "title": "Скоро главный праздник весны!",
+      "text": "Девушки любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы"
+    }
+  ],
+  "steps": [
+    {
+      "img": "/img/steps/ingridients.jpeg",
+      "alt": "Ингредиенты",
+      "title": "Лучшие ингредиенты",
+      "text": "Что-то про суперкачество, лучших поваров, свежесть и т.д."
+    },
+    {
+      "img": "/img/steps/package.jpeg",
+      "alt": "package",
+      "title": "Проверенный процесс",
+      "text": "Что-то про суперкоробочки и бантики и бла бла бла"
+    },
+    {
+      "img": "/img/steps/getting-order.jpeg",
+      "alt": "getting-order",
+      "title": "Получение в день заказа",
+      "text": "В день заказа доставка курьером или самовывоз"
+    },
+    {
+      "img": "/img/steps/delivery.jpeg",
+      "alt": "delivery",
+      "title": "Анонимная доставка",
+      "text": "Анонимная доставка"
+    }
+  ]
 }

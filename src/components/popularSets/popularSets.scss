@@ -1,0 +1,150 @@
+.popularSets {
+  margin-top: 40px;
+  align-items: center;
+  &__wrapper {
+    margin-top: 20px;
+    display: grid;
+    gap: 7px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__block {
+    width: 140px;
+    min-height: 215px;
+    padding: 8px 0 0 0;
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    margin: 0 auto;
+    &-img {
+      object-fit: cover;
+      width: 130px;
+      height: 98px;
+      padding: 0 8px;
+      margin: 0 auto;
+    }
+    &-main {
+      padding: 11px 4px 4px 4px;
+    }
+    &-text {
+      margin-top: 10px;
+      opacity: 0.8;
+      line-height: 17px;
+    }
+
+    &-price {
+      color: $pink;
+      margin: 0 auto;
+    }
+    &-footer {
+      border-top: 1px solid rgb(237, 237, 240);
+      display: grid;
+      align-items: center;
+      margin-top: 10px;
+      justify-content: space-between;
+      min-height: 36px;
+      grid-template-columns: 95px 45px;
+
+      &-subBlock {
+        display: flex;
+        justify-content: center;
+        border-left: 1px solid rgb(237, 237, 240);
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 11.19px;
+          height: 16px;
+        }
+        div {
+          display: none;
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 218px;
+    min-height: 40px;
+    margin: 25px auto 0 auto;
+    border: 2px solid $blue;
+    border-radius: 5px;
+    display: block;
+
+    &:disabled {
+      background: $gray;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .popularSets {
+    &__wrapper {
+      gap: 30px;
+    }
+
+    &__block {
+      width: 370px;
+      min-height: 459px;
+      &-title {
+        font-size: 18px;
+        text-align: start;
+      }
+      &-text {
+        font-size: 14px;
+        text-align: start;
+      }
+      &-price {
+        font-size: 18px;
+      }
+
+      &-img {
+        width: 370px;
+        height: 300px;
+      }
+      &-main {
+        padding: 21px;
+      }
+      &-footer {
+        grid-template-columns: 220px 150px;
+        min-height: 50px;
+
+        &-subBlock {
+          gap: 12px;
+          img {
+            width: 13.29px;
+            height: 19px;
+          }
+          div {
+            display: block;
+          }
+          &:hover {
+            border: 2px solid $pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .popularSets {
+    &__title {
+      font-size: 30px;
+    }
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__btn {
+      width: 293px;
+      min-height: 52px;
+      margin: 25px auto 0 auto;
+      border: 2px solid $blue;
+      border-radius: 5px;
+      display: block;
+
+      &:hover {
+        transition: all 0.3s;
+        transform: translateY(-8%);
+        border: 2px solid $pink;
+      }
+    }
+  }
+}

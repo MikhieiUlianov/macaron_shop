@@ -13,18 +13,11 @@ const Header = () => {
 
   const {
     activeTown,
-    activeCatalog,
     activeTownAccordion,
     activeCatalogAccordion,
     towns,
+    catalog,
   } = useSelector((state) => state.header);
-
-  const catalog = [
-    "Пирожные макарон",
-    "Эклеры",
-    "Вафельные трубочки",
-    "Профитроли",
-  ];
 
   return (
     <section className="header">

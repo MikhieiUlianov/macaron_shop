@@ -73,6 +73,7 @@
       padding: 12px;
       border-bottom: $line;
       cursor: pointer;
+      position: relative;
 
       div {
         border-bottom: 2px solid transparent;
@@ -93,6 +94,37 @@
 
       &:nth-child(1) {
         border-top: $line;
+      }
+
+      &-catalog {
+        display: none;
+
+        &.active {
+          display: flex !important;
+          flex-direction: column;
+          position: absolute;
+          z-index: 2;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+          width: 200px;
+
+          li {
+            height: 50px;
+            padding-top: 15px;
+            text-align: center;
+            background: rgb(247, 235, 229);
+            border-bottom: 1px solid rgb(236, 199, 180);
+            cursor: pointer;
+
+            &:hover {
+              background: rgb(236, 199, 180);
+            }
+          }
+        }
       }
     }
   }

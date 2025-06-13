@@ -6,6 +6,8 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const Children: typeof import('react')['Children']
+  const Fragment: typeof import('react')['Fragment']
   const Link: typeof import('react-router-dom')['Link']
   const MacaronService: typeof import('./src/services/MacaronService.js')['default']
   const NavLink: typeof import('react-router-dom')['NavLink']
@@ -13,14 +15,18 @@ declare global {
   const Outlet: typeof import('react-router-dom')['Outlet']
   const Route: typeof import('react-router-dom')['Route']
   const Routes: typeof import('react-router-dom')['Routes']
+  const Suspense: typeof import('react')['Suspense']
   const capitalize: typeof import('@/utils')['capitalize']
+  const cloneElement: typeof import('react')['cloneElement']
   const configureStore: typeof import('@reduxjs/toolkit')['configureStore']
   const create: typeof import('zustand')['create']
+  const createElement: typeof import('react')['createElement']
   const createEntityAdapter: typeof import('@reduxjs/toolkit')['createEntityAdapter']
   const createRef: typeof import('react')['createRef']
   const createSlice: typeof import('@reduxjs/toolkit')['createSlice']
   const formatDate: typeof import('@/utils')['formatDate']
   const forwardRef: typeof import('react')['forwardRef']
+  const isValidElement: typeof import('react')['isValidElement']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']
   const startTransition: typeof import('react')['startTransition']
