@@ -2,7 +2,7 @@ import Promo from "../promo/Promo";
 import PagesLinks from "../pagesLinks/PagesLinks";
 import Promotion from "../promotion/Promotion";
 import Holidays from "../holidays/Holidays";
-import PopularSets from "../popularSets/PopularSets";
+import PopularSets from "@/components/popularSets/PopularSets";
 import News from "../news/News";
 import Steps from "../steps/Steps";
 
@@ -13,7 +13,7 @@ const MainPage = () => {
       <PagesLinks />
       <Promotion />
       <Holidays />
-      <PopularSets />
+      <PopularSets mode="preview" />
       <News />
       <Steps />
     </>

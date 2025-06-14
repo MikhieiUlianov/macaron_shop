@@ -50,7 +50,7 @@ const Footer = () => {
     },
   ];
 
-  const renderItems = ({ blocks }) => {
+  const renderItems = (blocks) => {
     return blocks.map(({ title, links }) => {
       return (
         <div className="footer__info-block" key={uuidv4()}>
@@ -58,11 +58,11 @@ const Footer = () => {
             {title.toUpperCase()}
           </h3>
           <ul className="footer__info-block-items">
-            {links.map((link) => {
+            {links.map(({ to, label }) => {
               return (
-                <li className="fw-400 fz-14" key={uuidv4()}>
-                  {link}
-                </li>
+                <Link to={to} className="fw-400 fz-14" key={uuidv4()}>
+                  {label}
+                </Link>
               );
             })}
           </ul>

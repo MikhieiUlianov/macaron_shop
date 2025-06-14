@@ -76,7 +76,9 @@ const News = () => {
             ref={paginationRef}
           ></div>
         </div>
-        <button className="news__button fw-600 fz-12">Все новости</button>
+        <Link to={"/catalog/news"} className="news__button fw-600 fz-12">
+          Все новости
+        </Link>
       </div>
     </div>
   );

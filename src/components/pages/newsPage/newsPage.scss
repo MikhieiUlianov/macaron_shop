@@ -1,0 +1,134 @@
+.newsPage {
+  margin-top: 60px;
+  position: relative;
+  &__title {
+    margin-top: 20px;
+  }
+  &__filters {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &-filter {
+      background: rgb(247, 235, 229);
+      border-radius: 100px;
+      min-height: 28px;
+      padding: 11px 7px;
+      font-size: 14px;
+
+      &.active {
+        background: rgb(236, 199, 180);
+      }
+    }
+  }
+  &__wrapper {
+    margin-top: 20px;
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
+  }
+
+  &__item {
+    width: 140px;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    &-text {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+    &-title {
+      margin-top: 10px;
+    }
+  }
+
+  &__item-img {
+    height: 101px;
+    object-fit: cover;
+    width: 100%;
+    max-width: 140px;
+
+    border: 1px solid #ededf0;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__item-content {
+    width: 100%;
+    max-width: 140px;
+    border-left: 1px solid #ededf0;
+    border-right: 1px solid #ededf0;
+    border-top: 1px solid #ededf0;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  &__item-date,
+  &__item-title,
+  &__item-text {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  .newsPage {
+    margin-top: 85px;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__wrapper {
+      margin-top: 40px;
+      grid-template-columns: repeat(3, 270px);
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .newsPage {
+    &__filters {
+      margin-top: 40px;
+      gap: 4px;
+      flex-wrap: wrap;
+      &-filter {
+        padding: 9px 14px;
+
+        &:hover {
+          background: rgb(236, 199, 180);
+        }
+      }
+    }
+    &__wrapper {
+      grid-template-columns: repeat(3, 370px);
+      gap: 30px;
+    }
+    &__item {
+      width: 370px;
+      &-date {
+        font-size: 14px;
+      }
+
+      &-title {
+        font-size: 18px;
+      }
+      &-text {
+        font-size: 14px;
+      }
+    }
+
+    &__item-img {
+      height: 210px;
+      max-width: 370px;
+    }
+
+    &__item-content {
+      max-width: 370px;
+      padding: 20px;
+    }
+  }
+}

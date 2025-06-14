@@ -81,7 +81,14 @@ button {
   padding: 0;
   background: transparent;
 }
-
+.pageNav {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  &__curr {
+    color: $blue;
+  }
+}
 .container {
   width: 100%;
   padding: 0 10px;

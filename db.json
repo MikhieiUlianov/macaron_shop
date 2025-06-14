@@ -13,35 +13,37 @@
       "className": "icon-adult"
     }
   ],
-  "footer": {
-    "visibleOn": "desktop",
-    "blocks": [
-      {
-        "title": "Информация",
-        "links": [
-          "О компании",
-          "Гарантии вкуса и свежести",
-          "Доставка и оплата",
-          "Контакты"
-        ]
-      },
-      {
-        "title": "Каталог",
-        "links": [
-          "Каталог десертов",
-          "Готовые наборы",
-          "Собрать свой набор",
-          "Наборы с печатью",
-          "Свадебные предложения",
-          "Акции"
-        ]
-      },
-      {
-        "title": "Для бизнеса",
-        "links": ["Корпоративные подарки", "Для юридических лиц", "Оповикам"]
-      }
-    ]
-  },
+  "footer": [
+    {
+      "title": "Информация",
+      "links": [
+        { "label": "О компании", "to": "/about" },
+        { "label": "Гарантии вкуса и свежести", "to": "/guarantees" },
+        { "label": "Доставка и оплата", "to": "/delivery" },
+        { "label": "Контакты", "to": "/contacts" }
+      ]
+    },
+    {
+      "title": "Каталог",
+      "links": [
+        { "label": "Каталог десертов", "to": "/catalog" },
+        { "label": "Готовые наборы", "to": "/sets" },
+        { "label": "Собрать свой набор", "to": "/constructor" },
+        { "label": "Наборы с печатью", "to": "/printed-sets" },
+        { "label": "Свадебные предложения", "to": "/wedding" },
+        { "label": "Акции", "to": "/sales" }
+      ]
+    },
+    {
+      "title": "Для бизнеса",
+      "links": [
+        { "label": "Корпоративные подарки", "to": "/corporate" },
+        { "label": "Для юридических лиц", "to": "/legal-entities" },
+        { "label": "Оповикам", "to": "/wholesale" }
+      ]
+    }
+  ],
+
   "pagesLinks": [
     {
       "img": "/icons/pagesLinks/ready-made-sets.svg",
@@ -292,6 +294,23 @@
       "alt": "delivery",
       "title": "Анонимная доставка",
       "text": "Анонимная доставка"
+    }
+  ],
+  "guarantees": [
+    {
+      "img": "/img/guarantees/almond-flour.jpeg",
+      "alt": "almond-flour",
+      "text": "Только натуральная миндальная мука высокого качества"
+    },
+    {
+      "img": "/img/guarantees/colorings.jpeg",
+      "alt": "colorings",
+      "text": "Всегда свежие макаронс — готовим перед отправкой"
+    },
+    {
+      "img": "/img/guarantees/frukts.jpeg",
+      "alt": "frukts",
+      "text": "100% ручная работа с вниманием к каждой детали"
     }
   ]
 }

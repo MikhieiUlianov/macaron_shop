@@ -1,11 +1,19 @@
 const MainPage = lazy(() => import("@/components/pages/MainPage"));
-const CatalogPage = lazy(() => import("@/components/pages/CataloogPage"));
+const PopularSetsPage = lazy(() =>
+  import("@/components/pages/PopularSetsPage")
+);
+const NewsPage = lazy(() => import("@/components/pages/newsPage/NewsPage"));
+const GuaranteesPage = lazy(() =>
+  import("@/components/pages/guaranteesPage/GuaranteesPage")
+);
 
 const AppRoutesWrapper = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="catalog" element={<CatalogPage />} />
+      <Route path="/catalog/popular-sets" element={<PopularSetsPage />} />
+      <Route path="/catalog/news" element={<NewsPage />} />
+      <Route path="/guarantees" element={<GuaranteesPage />} />
     </Routes>
   );
 };
