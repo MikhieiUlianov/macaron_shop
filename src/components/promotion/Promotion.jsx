@@ -1,15 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 import useMacaronService from "@/services/MacaronService";
-import setContent from "@/utils/setContent";
-import initializeSwiper from "@/utils/initializeSlider";
+import setContent from "@/utils/setContent"; // You might not even need this with this approach
 import "./promotion.scss";
 
 const Promotion = () => {
   const { clearError, process, setProcess, getData } = useMacaronService();
   const [slides, setSlides] = useState([]);
-  const sliderRef = useRef(null);
-  const paginationRef = useRef(null);
-  const [swiperInitialized, setSwiperInitialized] = useState(false);
 
   useEffect(() => {
     clearError();
@@ -19,48 +20,12 @@ const Promotion = () => {
     });
   }, []);
 
-  useEffect(() => {
-    if (
-      slides.length > 0 &&
-      sliderRef.current &&
-      paginationRef.current &&
-      !swiperInitialized
-    ) {
-      initializeSwiper(sliderRef.current, paginationRef.current, {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: false,
-        pagination: {
-          el: paginationRef.current,
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            centeredSlides: false,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-            centeredSlides: false,
-          },
-          1920: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-            centeredSlides: false,
-          },
-        },
-      });
-      setSwiperInitialized(true);
-    }
-  }, [slides, swiperInitialized]);
-
-  const renderSlides = (slides) => {
-    return slides.map(({ label, text, img, alt }, index) => (
-      <div
+  // Render slides as <SwiperSlide> components — *very important*
+  const renderSlides = (slides) =>
+    slides.map(({ label, text, img, alt }, index) => (
+      <SwiperSlide
         key={index}
-        className={`swiper-slide promotion__slide ${
+        className={`promotion__slide ${
           label === "бесплатная доставка" ? "blue" : ""
         }`}
       >
@@ -78,28 +43,78 @@ const Promotion = () => {
             ))}
           </div>
         </div>
-      </div>
+      </SwiperSlide>
     ));
-  };
 
   return (
     <div className="promotion">
       <div className="container">
-        <h2 className="promotion__title fw-600 fz-18">Акции</h2>
         <div className="promotion__wrapper">
-          <div className="swiper promotion__slider" ref={sliderRef}>
-            <div className="swiper-wrapper">
-              {setContent(process, renderSlides, slides)}
-            </div>
-          </div>
+          <h2 className="promotion__title fw-600 fz-18">Акции</h2>
+          <Swiper
+            loop={true}
+            spaceBetween={10}
+            pagination={{
+              el: ".promotion__slider-pagination",
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              1920: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+            className="promotion__slider"
+          >
+            {setContent(process, renderSlides, slides)}
+          </Swiper>
+          <div className="swiper-pagination promotion__slider-pagination"></div>
         </div>
-        <div
-          className="swiper-pagination promotion__slider-pagination"
-          ref={paginationRef}
-        ></div>
       </div>
     </div>
   );
 };
 
 export default Promotion;
+
+/*        pagination={{
+                el: "promotion__slider-pagination",
+                clickable: true,
+              }}
+              modules={[Pagination]}   breakpoints: {{
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                  centeredSlides: false,
+                },
+                1200: {
+                  slidesPerView: 4,
+                  spaceBetween: 10,
+                  centeredSlides: false,
+                },
+                1920: {
+                  slidesPerView: 3,
+                  spaceBetween: 50,
+                  centeredSlides: false,
+                },
+              }}
+              className=" promotion__slider"
+            >
+              
+            </Swiper>
+            <div className="swiper-wrapper">
+              {setContent(process, renderSlides, slides)}
+            </div>
+        <div
+          className="swiper-pagination promotion__slider-pagination"
+     
+        ></div> */

@@ -30,12 +30,23 @@ const Menu = () => {
   ];
 
   const subButtons = [
-    "гарантия свежести",
-    "доставка и оплата",
-    "оптовые поставки",
-    "контакты",
+    {
+      label: "гарантия свежести",
+      link: "/guarantees",
+    },
+    {
+      label: "доставка и оплата",
+      link: "/delivery",
+    },
+    {
+      label: "оптовые поставки",
+      link: "/wholesale",
+    },
+    {
+      label: "контакты",
+      link: "/contacts",
+    },
   ];
-
   return (
     <div className={`menu ${activeMenu ? "active" : ""}`}>
       <img
@@ -104,9 +115,9 @@ const Menu = () => {
       </ul>
 
       <ul className="menu__subButtons">
-        {subButtons.map((subButton) => (
-          <li className="menu__subButtons-button fw-400 fz-14" key={subButton}>
-            <a href="#">{subButton}</a>
+        {subButtons.map(({ label, link }) => (
+          <li className="menu__subButtons-button fw-400 fz-14" key={label}>
+            <Link to={link}>{label}</Link>
           </li>
         ))}
       </ul>

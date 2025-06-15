@@ -2,90 +2,140 @@
   "social": [
     {
       "href": "#",
-      "className": "icon-telegram"
+      "className": "icon-telegram",
+      "id": "16e8"
     },
     {
       "href": "#",
-      "className": "icon-vkontakte"
+      "className": "icon-vkontakte",
+      "id": "6ba5"
     },
     {
       "href": "#",
-      "className": "icon-adult"
+      "className": "icon-adult",
+      "id": "6313"
     }
   ],
   "footer": [
     {
       "title": "Информация",
       "links": [
-        { "label": "О компании", "to": "/about" },
-        { "label": "Гарантии вкуса и свежести", "to": "/guarantees" },
-        { "label": "Доставка и оплата", "to": "/delivery" },
-        { "label": "Контакты", "to": "/contacts" }
-      ]
+        {
+          "label": "О компании",
+          "to": "/about"
+        },
+        {
+          "label": "Гарантии вкуса и свежести",
+          "to": "/guarantees"
+        },
+        {
+          "label": "Доставка и оплата",
+          "to": "/delivery"
+        },
+        {
+          "label": "Контакты",
+          "to": "/contacts"
+        }
+      ],
+      "id": "6894"
     },
     {
       "title": "Каталог",
       "links": [
-        { "label": "Каталог десертов", "to": "/catalog" },
-        { "label": "Готовые наборы", "to": "/sets" },
-        { "label": "Собрать свой набор", "to": "/constructor" },
-        { "label": "Наборы с печатью", "to": "/printed-sets" },
-        { "label": "Свадебные предложения", "to": "/wedding" },
-        { "label": "Акции", "to": "/sales" }
-      ]
+        {
+          "label": "Каталог десертов",
+          "to": "/catalog"
+        },
+        {
+          "label": "Готовые наборы",
+          "to": "/sets"
+        },
+        {
+          "label": "Собрать свой набор",
+          "to": "/constructor"
+        },
+        {
+          "label": "Наборы с печатью",
+          "to": "/printed-sets"
+        },
+        {
+          "label": "Свадебные предложения",
+          "to": "/wedding"
+        },
+        {
+          "label": "Акции",
+          "to": "/sales"
+        }
+      ],
+      "id": "fd93"
     },
     {
       "title": "Для бизнеса",
       "links": [
-        { "label": "Корпоративные подарки", "to": "/corporate" },
-        { "label": "Для юридических лиц", "to": "/legal-entities" },
-        { "label": "Оповикам", "to": "/wholesale" }
-      ]
+        {
+          "label": "Корпоративные подарки",
+          "to": "/corporate"
+        },
+        {
+          "label": "Для юридических лиц",
+          "to": "/legal-entities"
+        },
+        {
+          "label": "Оповикам",
+          "to": "/wholesale"
+        }
+      ],
+      "id": "3e7c"
     }
   ],
-
   "pagesLinks": [
     {
       "img": "/icons/pagesLinks/ready-made-sets.svg",
       "alt": "ready-made-sets",
       "title": "Готовые наборы",
       "text": "Готовые наборы со скидкой. <br/>Вы можете подобрать набор на подходящий случай.",
-      "colorClass": "orange"
+      "colorClass": "orange",
+      "id": "ff6f"
     },
     {
       "img": "/icons/pagesLinks/custom-set.svg",
       "alt": "custom-set",
       "title": "Собрать свой набор",
       "text": "Выбрать количество макарун, и выбрать вкусы",
-      "colorClass": "pink"
+      "colorClass": "pink",
+      "id": "b761"
     },
     {
       "img": "/icons/pagesLinks/custom-design.svg",
       "alt": "custom-design",
       "title": "Набор с индивидуальной печатью",
       "text": "Собрать набор макарон с уникальным дизайном. ",
-      "colorClass": "green"
+      "colorClass": "green",
+      "id": "301a"
     },
     {
       "img": "/icons/pagesLinks/weeding.svg",
       "alt": "weeding",
       "title": "Свадебные предложения",
       "text": "Нежные пирожные макаронс с разными вкусами для украшения вашего свадебного торжества",
-      "colorClass": "salmon"
+      "colorClass": "salmon",
+      "id": "efba"
     },
     {
       "img": "/icons/pagesLinks/corporate-gift.svg",
       "alt": "corporate",
       "title": "Корпоративные подарки",
       "text": "От 85 руб за шт. С уникальным дизайном. <br/>Приятный комплимент для коллег и партнеров",
-      "colorClass": "blue"
+      "colorClass": "blue",
+      "id": "f4d5"
     },
     {
       "img": "/icons/pagesLinks/wholesale.svg",
       "alt": "delivery",
       "title": "Оптовые поставки",
       "text": "Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы.",
-      "colorClass": "purple"
+      "colorClass": "purple",
+      "id": "669c"
     }
   ],
   "promotionSlides": [
@@ -93,63 +143,74 @@
       "label": "новинка",
       "img": "/img/promotion/chocolate-cake.jpeg",
       "alt": "chocolate-cake",
-      "text": "Шоколадное пирожное картошка на основе бисквита!"
+      "text": "Шоколадное пирожное картошка на основе бисквита!",
+      "id": "9583"
     },
     {
       "label": "сладкая новинка",
       "img": "/img/promotion/caramel-candy.jpeg",
       "alt": "caramel-candy",
-      "text": "Карамель на палочке <br/> из натуральных ингредиентов"
+      "text": "Карамель на палочке <br/> из натуральных ингредиентов",
+      "id": "327a"
     },
     {
       "label": "новинка",
       "img": "/img/promotion/delicious-candies.jpeg",
       "alt": "delicious-candy",
-      "text": "Аппетитные конфеты <br/> на основе миндального печенья и крема"
+      "text": "Аппетитные конфеты <br/> на основе миндального печенья и крема",
+      "id": "ebf0"
     },
     {
       "label": "новинка",
       "img": "/img/promotion/delicious-candies.jpeg",
       "alt": "delicious-candy",
-      "text": "Аппетитные конфеты <br/> на основе миндального печенья и крема"
+      "text": "Аппетитные конфеты <br/> на основе миндального печенья и крема",
+      "id": "71e5"
     },
     {
       "label": "бесплатная доставка",
       "img": "/img/promotion/free-delivery.jpeg",
       "alt": "free-delivery",
-      "text": "По СПб в районе КАД –  от 3000₽ <br/> По МСК – от 5000₽"
+      "text": "По СПб в районе КАД –  от 3000₽ <br/> По МСК – от 5000₽",
+      "id": "d1b7"
     }
   ],
   "holidays": [
     {
       "img": "/img/holidays/macaron-yellow-hol.png",
       "alt": "macaron-yellow",
-      "text": "Скоро<br/>День рождения<br/>близкого человека "
+      "text": "Скоро<br/>День рождения<br/>близкого человека ",
+      "id": "db04"
     },
     {
       "img": "/img/holidays/macaron-pink-hol.png",
       "alt": "macaron-pink",
-      "text": "1 января<br/>Новый Год<br/>2021"
+      "text": "1 января<br/>Новый Год<br/>2021",
+      "id": "9265"
     },
     {
       "img": "/img/holidays/macaron-blue-hol.png",
       "alt": "macaron-blue",
-      "text": "14 февраля<br/>День Святого<br/>Валентина"
+      "text": "14 февраля<br/>День Святого<br/>Валентина",
+      "id": "f7c3"
     },
     {
       "img": "/img/holidays/macaron-yellow-hol.png",
       "alt": "macaron-yellow",
-      "text": "23 февраля<br/>День Защитника<br/>Отечества"
+      "text": "23 февраля<br/>День Защитника<br/>Отечества",
+      "id": "467e"
     },
     {
       "img": "/img/holidays/macaron-pink-hol.png",
       "alt": "macaron-pink",
-      "text": "8 марта<br/>Международный<br/>Женский День"
+      "text": "8 марта<br/>Международный<br/>Женский День",
+      "id": "cda9"
     },
     {
       "img": "/img/holidays/macaron-blue-hol.png",
       "alt": "macaron-blue",
-      "text": "9 марта<br/>День Сурка"
+      "text": "9 марта<br/>День Сурка",
+      "id": "daaf"
     }
   ],
   "popularSets": [
@@ -228,6 +289,7 @@
   ],
   "news": [
     {
+      "id": "valentines-2023",
       "img": "/img/news/valentine's.jpeg",
       "alt": "valentine's day",
       "date": "11.02.2023",
@@ -235,6 +297,7 @@
       "text": "Подарок уже через 2 дня. День всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп"
     },
     {
+      "id": "defenders-day-2023",
       "img": "/img/news/event.jpeg",
       "alt": "event",
       "date": "23.03.2023",
@@ -242,6 +305,7 @@
       "text": "День Защитника Отечества уже совсем скоро! Порадуйте своего сладкоежку с помощью аппетитных наборов от МакаронШоп"
     },
     {
+      "id": "spring-holiday-2023",
       "img": "/img/news/macarons.jpeg",
       "alt": "macarons",
       "date": "10.04.2023",
@@ -249,6 +313,7 @@
       "text": "Девушки любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы"
     },
     {
+      "id": "valentines-2023-b",
       "img": "/img/news/valentine's.jpeg",
       "alt": "valentine's day",
       "date": "11.02.2023",
@@ -256,6 +321,7 @@
       "text": "Подарок уже через 2 дня. День всех влюблённых не за горами. Расскажи о своих чувствах с помощью сладкой валентинки от МакаронШоп"
     },
     {
+      "id": "defenders-day-2023-b",
       "img": "/img/news/event.jpeg",
       "alt": "event",
       "date": "23.03.2023",
@@ -263,11 +329,51 @@
       "text": "День Защитника Отечества уже совсем скоро! Порадуйте своего сладкоежку с помощью аппетитных наборов от МакаронШоп"
     },
     {
+      "id": "spring-holiday-2023-b",
       "img": "/img/news/macarons.jpeg",
       "alt": "macarons",
       "date": "10.04.2023",
       "title": "Скоро главный праздник весны!",
       "text": "Девушки любят, когда вкусно, красиво и натурально. Смотрите больше наборов с десертами ручной работы"
+    }
+  ],
+  "newsNewsPage": [
+    {
+      "id": "spring-holiday-2023",
+      "title": "Скоро главный праздник весны",
+      "subtitle": "Скоро главный праздник весны! H2",
+      "text": "Совсем скоро любимый весенний праздник. А мы уже подготовили коллекцию пирожных макарон с фирменным дизайном. Пироженки вызывают восторг у каждого, ведь они не только красивые, но и вкусные! Готовим с любовью исключительно из натуральных ингредиентов!",
+      "filters": [
+        "8 марта",
+        "Весна",
+        "Подарок на 8 марта"
+      ],
+      "list": [
+        "Набор на 9 макарон - 1200 рублей",
+        "Набор Сердце на 22 макарон - 3500 рублей",
+        "Набор на 20 макарон - 1800 рублей",
+        "Набор на 3 макарон - 450 рублей",
+        "Набор Круглый на 40 макарон - 5000 рублей",
+        "Набор-комбо 3+2 - 800 рублей"
+      ],
+      "thumbs": [
+        {
+          "thumbImg": "/img/news/macarons.jpeg",
+          "thumbAlt": "Праздничное оформление"
+        },
+        {
+          "thumbImg": "/img/news/macarons.jpeg",
+          "thumbAlt": "Уличное выступление"
+        },
+        {
+          "thumbImg": "/img/news/macarons.jpeg",
+          "thumbAlt": "Ярмарка"
+        },
+        {
+          "thumbImg": "/img/news/macarons.jpeg",
+          "thumbAlt": "Семья на празднике"
+        }
+      ]
     }
   ],
   "steps": [
@@ -275,42 +381,90 @@
       "img": "/img/steps/ingridients.jpeg",
       "alt": "Ингредиенты",
       "title": "Лучшие ингредиенты",
-      "text": "Что-то про суперкачество, лучших поваров, свежесть и т.д."
+      "text": "Что-то про суперкачество, лучших поваров, свежесть и т.д.",
+      "id": "4c99"
     },
     {
       "img": "/img/steps/package.jpeg",
       "alt": "package",
       "title": "Проверенный процесс",
-      "text": "Что-то про суперкоробочки и бантики и бла бла бла"
+      "text": "Что-то про суперкоробочки и бантики и бла бла бла",
+      "id": "b285"
     },
     {
       "img": "/img/steps/getting-order.jpeg",
       "alt": "getting-order",
       "title": "Получение в день заказа",
-      "text": "В день заказа доставка курьером или самовывоз"
+      "text": "В день заказа доставка курьером или самовывоз",
+      "id": "8001"
     },
     {
       "img": "/img/steps/delivery.jpeg",
       "alt": "delivery",
       "title": "Анонимная доставка",
-      "text": "Анонимная доставка"
+      "text": "Анонимная доставка",
+      "id": "afc1"
     }
   ],
   "guarantees": [
     {
       "img": "/img/guarantees/almond-flour.jpeg",
       "alt": "almond-flour",
-      "text": "Только натуральная миндальная мука высокого качества"
+      "text": "Только натуральная миндальная мука высокого качества",
+      "id": "0a63"
     },
     {
       "img": "/img/guarantees/colorings.jpeg",
       "alt": "colorings",
-      "text": "Всегда свежие макаронс — готовим перед отправкой"
+      "text": "Всегда свежие макаронс — готовим перед отправкой",
+      "id": "bc3a"
     },
     {
       "img": "/img/guarantees/frukts.jpeg",
       "alt": "frukts",
-      "text": "100% ручная работа с вниманием к каждой детали"
+      "text": "100% ручная работа с вниманием к каждой детали",
+      "id": "805e"
+    }
+  ],
+  "requests": [
+    {
+      "id": "9c30",
+      "name": "54545",
+      "email": "wefwef@gmail.com",
+      "phone": "454545454544",
+      "companyName": "4454554",
+      "message": "444444444444444444"
+    },
+    {
+      "id": "8c9b",
+      "name": "557575",
+      "email": "wefwef@gmail.com",
+      "phone": "757567567575",
+      "companyName": "908",
+      "message": ""
+    },
+    {
+      "id": "a585",
+      "name": "557575",
+      "email": "wefwef@gmail.com",
+      "phone": "757567567575",
+      "companyName": "908",
+      "message": ""
+    },
+    {
+      "id": "3f18",
+      "name": "6456456456",
+      "email": "wefwef@gmail.com",
+      "phone": "456456455645",
+      "companyName": "4565",
+      "message": ""
+    },
+    {
+      "id": "22d6",
+      "name": "3463456346",
+      "phone": "6456456456",
+      "companyName": "4564565",
+      "email": "wefwef@gmail.com"
     }
   ]
 }

@@ -48,15 +48,15 @@ const NewsPage = () => {
     }
   };
   const renderNews = (news) => {
-    return news.map(({ img, alt, text, title, date }, index) => (
-      <div className="newsPage__item" key={index}>
+    return news.map(({ img, alt, text, title, date, id }) => (
+      <Link to={`/news/${id}`} className="newsPage__item" key={id}>
         <img src={img} alt={alt} className="newsPage__item-img" />
         <div className="newsPage__item-content">
           <div className="newsPage__item-date fw-400 fz-10">{date}</div>
           <h3 className="newsPage__item-title fw-600 fz-12">{title}</h3>
           <div className="newsPage__item-text fz-10 fw-400">{text}</div>
         </div>
-      </div>
+      </Link>
     ));
   };
 
@@ -64,7 +64,7 @@ const NewsPage = () => {
     <div className="newsPage">
       <div className="container">
         <div className="pageNav">
-          <Link to={"/"}>Главная > </Link>
+          <Link to={"/"}>Главная &gt; </Link>
           <div className="pageNav__curr "> Новости</div>
         </div>
         <h1 className="newsPage__title fz-18 fw-600">Новости</h1>

@@ -14,9 +14,9 @@ const GuaranteesPage = () => {
     });
   }, [getData, clearError]);
   const renderGuarantees = (guarantees) => {
-    return guarantees.map(({ img, alt, text }) => {
+    return guarantees.map(({ img, alt, text }, idx) => {
       return (
-        <div className="guarantees__block">
+        <div className="guarantees__block" key={idx}>
           <img src={img} alt={alt} className="guarantees__block-img" />
           <div className="guarantees__block-text fz-12 fw-600">
             {" "}
@@ -31,7 +31,7 @@ const GuaranteesPage = () => {
     <div className="guarantees">
       <div className="container">
         <div className="pageNav">
-          <Link to={"/"}>Главная > </Link>
+          <Link to={"/"}>Главная &gt; </Link>
           <div className="pageNav__curr "> Гарантии вкуса и качества</div>
         </div>
         <h1 className="guarantees__title fz-18 fw-600">

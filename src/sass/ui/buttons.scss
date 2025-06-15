@@ -21,16 +21,12 @@
     background: $pink-hovered;
   }
 }
-
-.pagination {
-  border: 1px solid rgba(41, 41, 41, 0.1);
-  background: rgb(255, 255, 255);
-
+.btn-submit {
+  @include button;
+  width: 189px;
+  height: 40px;
   &:hover {
-    background: rgb(236, 238, 241);
-  }
-  .active {
-    background: rgb(231, 66, 106);
+    background: $pink-hovered;
   }
 }
 
@@ -56,5 +52,12 @@
   color: $dark;
   &:hover {
     color: $pink;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn-submit {
+    width: 254px;
+    height: 50px;
   }
 }

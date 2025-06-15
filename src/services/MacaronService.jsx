@@ -26,8 +26,23 @@ const useMacaronService = () => {
     },
     [request]
   );
-
-  return { process, setProcess, getData, postData, getCatalog, clearError };
+  const getPageData = useCallback(
+    async (id, folder) => {
+      const res = await request(`http://localhost:5000/${folder}`);
+      const item = res.find((i) => i.id === id);
+      return item;
+    },
+    [request]
+  );
+  return {
+    process,
+    setProcess,
+    getData,
+    postData,
+    getCatalog,
+    getPageData,
+    clearError,
+  };
 };
 
 export default useMacaronService;
