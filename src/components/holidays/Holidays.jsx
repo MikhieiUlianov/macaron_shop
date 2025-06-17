@@ -32,14 +32,14 @@ const Holidays = () => {
   };
 
   return (
-    <div className="holidays">
+    <section className="holidays">
       <div className="container">
         <h1 className="holidays__title fz-18 fw-600">Ближайшие праздники</h1>
         <div className="holidays__wrapper">
           {setContent(process, renderHolidays, holidays)}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

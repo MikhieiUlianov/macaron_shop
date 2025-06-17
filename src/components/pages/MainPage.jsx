@@ -1,10 +1,10 @@
-import Promo from "../promo/Promo";
-import PagesLinks from "../pagesLinks/PagesLinks";
-import Promotion from "../promotion/Promotion";
-import Holidays from "../holidays/Holidays";
-import PopularSets from "@/components/popularSets/PopularSets";
-import News from "../news/News";
-import Steps from "../steps/Steps";
+import Promo from "../Promo/Promo";
+import PagesLinks from "../PagesLinks/PagesLinks";
+import Promotion from "../Promotion/Promotion";
+import Holidays from "../Holidays/Holidays";
+import PopularSets from "@/components/PopularSets/PopularSets";
+import News from "../News/News";
+import Steps from "../Steps/Steps";
 
 const MainPage = () => {
   return (

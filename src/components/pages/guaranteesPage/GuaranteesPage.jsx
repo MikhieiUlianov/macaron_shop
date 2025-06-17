@@ -28,7 +28,7 @@ const GuaranteesPage = () => {
     });
   };
   return (
-    <div className="guarantees">
+    <section className="guarantees">
       <div className="container">
         <div className="pageNav">
           <Link to={"/"}>Главная &gt; </Link>
@@ -45,7 +45,7 @@ const GuaranteesPage = () => {
           {setContent(process, renderGuarantees, guarantees)}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

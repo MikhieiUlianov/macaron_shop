@@ -29,7 +29,7 @@ const Form = () => {
   };
 
   return (
-    <div className="form">
+    <section className="form">
       <h2 className="form__title fz-18 fw-600">
         Заказать расчёт или отправить запрос на сотрудничество
       </h2>
@@ -158,10 +158,12 @@ const Form = () => {
 
         <div className="form__policy fz-12 fw-400">
           Нажимая на кнопку "Оформить заказ", вы принимаете условия
-          <span>Политики конфиденциальности</span>
+          <Link to={"/policy"} className="form__policy-link">
+            Политики конфиденциальности
+          </Link>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 

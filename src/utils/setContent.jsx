@@ -1,6 +1,6 @@
-import Spinner from "@/components/spinner/Spinner";
-import ErrorMessage from "@/components/errorMessage/ErrorMessage";
-import NotAvailibleMessage from "@/components/notAvailibleMessage/NotAvailibleMessage";
+import Spinner from "@/components/Spinner/Spinner";
+import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
+import NotAvailibleMessage from "@/components/NotAvailibleMessage/NotAvailibleMessage";
 
 const setContent = (process, renderFunction, data, newDataLoading = false) => {
   switch (process) {

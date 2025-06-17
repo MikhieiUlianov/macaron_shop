@@ -1,3 +1,5 @@
+import arrow from "/icons/arrow.svg";
+
 import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
 import "./pagesLinks.scss";
@@ -26,7 +28,7 @@ const PagesLinks = () => {
                 {title}
               </div>
               <img
-                src="/icons/arrow.svg"
+                src={arrow}
                 alt="arrow"
                 className="pagesLinks__block-subBlock-arrow"
               />
@@ -46,13 +48,13 @@ const PagesLinks = () => {
   };
 
   return (
-    <div className="pagesLinks">
+    <section className="pagesLinks">
       <div className="container">
         <ul className="pagesLinks__blocks">
           {setContent(process, renderPagesLinks, pagesLinks)}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

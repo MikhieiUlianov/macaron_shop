@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import Social from "../social/Social";
+import Social from "../Social/Social";
 import {
   setActiveMenu,
   changeActiveTown,
   changeActiveTownAccordion,
   changeActiveCatalog,
   changeActiveCatalogAccordion,
-} from "../header/headerSlice";
+} from "../Header/headerSlice";
 import "./menu.scss";
 
 const Menu = () => {
@@ -48,7 +48,7 @@ const Menu = () => {
     },
   ];
   return (
-    <div className={`menu ${activeMenu ? "active" : ""}`}>
+    <section className={`menu ${activeMenu ? "active" : ""}`}>
       <img
         src="/icons/close.svg"
         alt="close"
@@ -130,7 +130,7 @@ const Menu = () => {
       </div>
 
       <Social extraWrapperClass="menu__social" />
-    </div>
+    </section>
   );
 };
 

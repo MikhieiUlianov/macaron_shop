@@ -3,7 +3,7 @@ import "./deliveryPage.scss";
 
 const DeliveryPage = () => {
   return (
-    <div className="delivery">
+    <section className="delivery">
       <div className="container">
         <div className="pageNav">
           <Link to={"/"}>Главная &gt;</Link>
@@ -132,7 +132,7 @@ const DeliveryPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

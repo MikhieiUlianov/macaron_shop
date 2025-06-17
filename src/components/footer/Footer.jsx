@@ -1,22 +1,20 @@
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
-import useMacaronService from "@/services/MacaronService";
-import Social from "../social/Social";
-import setContent from "@/utils/setContent";
+import { useGetFooterQuery } from "@/api/apiSlice";
+import Social from "../Social/Social";
+import QueryWrapper from "@/utils/QueryWrapper";
 
 import "./footer.scss";
 
 const Footer = () => {
-  const { clearError, getData, process, setProcess } = useMacaronService();
-  const [blocks, setBlocks] = useState([]);
-  useEffect(() => {
-    clearError();
-    getData("footer")
-      .then((data) => {
-        setBlocks(data);
-      })
-      .then(() => setProcess("confirmed"));
-  }, []);
+  const {
+    data: blocks = [],
+    isLoading,
+    isError,
+    isFetching,
+  } = useGetFooterQuery();
+
   const steps = [
     {
       img: "/icons/cooking-love.svg",
@@ -51,28 +49,24 @@ const Footer = () => {
   ];
 
   const renderItems = (blocks) => {
-    return blocks.map(({ title, links }) => {
-      return (
-        <div className="footer__info-block" key={uuidv4()}>
-          <h3 className="footer__into-block-title fw-600 fz-16">
-            {title.toUpperCase()}
-          </h3>
-          <ul className="footer__info-block-items">
-            {links.map(({ to, label }) => {
-              return (
-                <Link to={to} className="fw-400 fz-14" key={uuidv4()}>
-                  {label}
-                </Link>
-              );
-            })}
-          </ul>
-        </div>
-      );
-    });
+    return blocks.map(({ title, links }) => (
+      <div className="footer__info-block" key={uuidv4()}>
+        <h3 className="footer__into-block-title fw-600 fz-16">
+          {title.toUpperCase()}
+        </h3>
+        <ul className="footer__info-block-items">
+          {links.map(({ to, label }) => (
+            <Link to={to} className="fw-400 fz-14" key={uuidv4()}>
+              {label}
+            </Link>
+          ))}
+        </ul>
+      </div>
+    ));
   };
 
   return (
-    <div className="footer">
+    <section className="footer">
       <div className="container">
         <div className="footer__wrapper pure-g">
           <div className="footer__block  pure-u-1 pure-u-xl-1-3">
@@ -84,9 +78,7 @@ const Footer = () => {
                     alt={`Шаг ${index + 1}`}
                     className="footer__steps-step-img"
                   />
-                  <div className="fz-12 fw-400" key={uuidv4()}>
-                    {step.text}
-                  </div>
+                  <div className="fz-12 fw-400">{step.text}</div>
                 </li>
               ))}
             </ul>
@@ -110,7 +102,14 @@ const Footer = () => {
           </div>
           <div className="footer__block  pure-u-1 pure-u-xl-2-3">
             <div className="footer__info">
-              {setContent(process, renderItems, blocks)}
+              <QueryWrapper
+                isError={isError}
+                isFetching={isFetching}
+                isLoading={isLoading}
+                data={blocks}
+              >
+                {renderItems(blocks)}
+              </QueryWrapper>
             </div>
           </div>
         </div>
@@ -120,7 +119,7 @@ const Footer = () => {
           extraWrapperClass="footer__social"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

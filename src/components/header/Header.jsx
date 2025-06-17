@@ -1,5 +1,11 @@
+import place from "/icons/place.svg";
+import phone from "/icons/phone.svg";
+import shop from "/icons/shop.svg";
+import sale from "/icons/sale.svg";
+import logo from "/icons/logo.svg";
+
 import "./header.scss";
-import Social from "../social/Social";
+import Social from "../Social/Social";
 import {
   changeActiveCatalog,
   changeActiveTown,
@@ -49,11 +55,7 @@ const Header = () => {
               }`}
               onClick={() => dispatch(changeActiveTownAccordion())}
             >
-              <img
-                className="header__info-block-img"
-                src="/icons/place.svg"
-                alt="place"
-              />
+              <img className="header__info-block-img" src={place} alt="place" />
               <div className="header__info-block-text fw-400 fz-14">
                 {activeTown}
               </div>
@@ -75,11 +77,7 @@ const Header = () => {
             </div>
 
             <div className="header__info-block">
-              <img
-                className="header__info-block-img"
-                src="/icons/phone.svg"
-                alt="phone"
-              />
+              <img className="header__info-block-img" src={phone} alt="phone" />
               <a
                 href="tel:+1234567890"
                 className="header__info-block-text fw-400 fz-14"
@@ -89,11 +87,7 @@ const Header = () => {
             </div>
 
             <div className="header__info-block header__shop">
-              <img
-                src="/icons/shop.svg"
-                alt="shop"
-                className="header__shop-img"
-              />
+              <img src={shop} alt="shop" className="header__shop-img" />
               <div className="header__shop-circle"></div>
               <div className="header__shop-counter">1</div>
               <div className="header__shop-text fw-400 fz-14">
@@ -103,14 +97,10 @@ const Header = () => {
             <Social extraWrapperClass="header__info-block header__social" />
           </div>
 
-          <img src="/icons/logo.svg" alt="logo" className="header__logo" />
+          <img src={logo} alt="logo" className="header__logo" />
 
           <div className="header__shop header__shop-mobile">
-            <img
-              src="/icons/shop.svg"
-              alt="shop"
-              className="header__shop-img"
-            />
+            <img src={shop} alt="shop" className="header__shop-img" />
             <div className="header__shop-circle"></div>
             <div className="header__shop-counter">1</div>
           </div>
@@ -122,7 +112,7 @@ const Header = () => {
           <div className="header__subBlock-block fw-400 fz-14">
             СЛАДКИЕ ДНИ
             <div className="header__subBlock-block-circle">
-              <img src="/icons/sale.svg" alt="sale" />
+              <img src={sale} alt="sale" />
             </div>
           </div>
           <div className="header__subBlock-block fw-400 fz-14">
@@ -131,11 +121,7 @@ const Header = () => {
           <div className="header__subBlock-block fw-400 fz-14">
             СОБРАТЬ НАБОР
           </div>
-          <img
-            src="/icons/logo.svg"
-            alt="logo"
-            className="header__subBlock-block-logo"
-          />
+          <img src={logo} alt="logo" className="header__subBlock-block-logo" />
           <div className="header__subBlock-block fw-400 fz-14">
             СОЗДАТЬ ДИЗАЙН
           </div>

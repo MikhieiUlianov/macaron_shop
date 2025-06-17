@@ -1,33 +1,39 @@
+import yellow from "/img/spots/spots-yellow.png";
+import green from "/img/spots/spots-green.png";
+import pink from "/img/spots/spots-pink.png";
+import blue from "/img/spots/spots-blue.png";
+import orange from "/img/spots/spots-orange.png";
+import heart from "/img/promo-heart.png";
 import "./promo.scss";
 
 const Promo = () => {
   return (
-    <div className="promo">
+    <section className="promo">
       <div className="container">
         <div className="promo__wrapper">
           <img
             className="promo__spots promo__spots-yellow"
-            src="/img/spots/spots-yellow.png"
+            src={yellow}
             alt="spot-yellow"
           />
           <img
             className="promo__spots promo__spots-green"
-            src="/img/spots/spots-green.png"
+            src={green}
             alt="spot-green"
           />
           <img
             className="promo__spots promo__spots-pink"
-            src="/img/spots/spots-pink.png"
+            src={pink}
             alt="spot-pink"
           />
           <img
             className="promo__spots promo__spots-blue"
-            src="/img/spots/spots-blue.png"
+            src={blue}
             alt="spot-blue"
           />
           <img
             className="promo__spots promo__spots-orange"
-            src="/img/spots/spots-orange.png"
+            src={orange}
             alt="spot-orange"
           />
           <div className="promo__wrapper-block">
@@ -46,15 +52,11 @@ const Promo = () => {
             </div>
           </div>
           <div className="promo__wrapper-block">
-            <img
-              src="/img/promo-heart.png"
-              alt="heart"
-              className="promo__img"
-            />
+            <img src={heart} alt="heart" className="promo__img" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

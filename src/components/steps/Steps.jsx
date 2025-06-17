@@ -26,7 +26,7 @@ const Steps = () => {
   };
 
   return (
-    <div className="steps">
+    <section className="steps">
       <div className="container">
         <div className="steps__title fw-600 fz-18">
           Мы обо всём позаботились
@@ -35,7 +35,7 @@ const Steps = () => {
           {setContent(process, renderSteps, steps)}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

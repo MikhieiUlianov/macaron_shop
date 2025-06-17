@@ -1,6 +1,6 @@
-import header from "@/components/header/headerSlice";
-/* 
-import { apiSlice } from "../api/apiSlice"; */
+import header from "@/components/Header/headerSlice";
+
+import { apiSlice } from "@/api/apiSlice";
 
 const stringMiddleware = () => (next) => (action) => {
   if (typeof action === "string") {
@@ -13,11 +13,11 @@ const stringMiddleware = () => (next) => (action) => {
 
 const store = configureStore({
   reducer: {
-    header /* 
-    [apiSlice.reducerPath]: apiSlice.reducer, */,
+    header,
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(stringMiddleware /* apiSlice.middleware */),
+    getDefaultMiddleware().concat(stringMiddleware, apiSlice.middleware),
   devTools: process.env.NODE_ENV !== "production",
 });
 

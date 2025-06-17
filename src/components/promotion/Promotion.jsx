@@ -47,7 +47,7 @@ const Promotion = () => {
     ));
 
   return (
-    <div className="promotion">
+    <section className="promotion">
       <div className="container">
         <div className="promotion__wrapper">
           <h2 className="promotion__title fw-600 fz-18">Акции</h2>
@@ -80,41 +80,8 @@ const Promotion = () => {
           <div className="swiper-pagination promotion__slider-pagination"></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Promotion;
-
-/*        pagination={{
-                el: "promotion__slider-pagination",
-                clickable: true,
-              }}
-              modules={[Pagination]}   breakpoints: {{
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                  centeredSlides: false,
-                },
-                1200: {
-                  slidesPerView: 4,
-                  spaceBetween: 10,
-                  centeredSlides: false,
-                },
-                1920: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                  centeredSlides: false,
-                },
-              }}
-              className=" promotion__slider"
-            >
-              
-            </Swiper>
-            <div className="swiper-wrapper">
-              {setContent(process, renderSlides, slides)}
-            </div>
-        <div
-          className="swiper-pagination promotion__slider-pagination"
-     
-        ></div> */

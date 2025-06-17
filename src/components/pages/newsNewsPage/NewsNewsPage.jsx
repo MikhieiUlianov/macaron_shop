@@ -3,6 +3,7 @@ import { Thumbs, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
+
 import Form from "@/components/form/Form";
 import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
@@ -11,16 +12,18 @@ import "./newsNewsPage.scss";
 const NewsNewsPage = () => {
   const { newsPageId } = useParams();
   const { clearError, process, setProcess, getPageData } = useMacaronService();
-  const [pageData, setPageData] = useState([]);
+  const [pageData, setPageData] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const paginationRef = useRef(null);
 
   useEffect(() => {
     clearError();
-    getPageData(newsPageId, "newsNewsPage").then((data) => {
+    getPageData(newsPageId).then((data) => {
       setPageData(data);
       setProcess("confirmed");
     });
-  }, [newsPageId, clearError, getPageData, setProcess]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [newsPageId]);
 
   const renderNewsPage = useCallback(
     (item) => {
@@ -54,43 +57,43 @@ const NewsNewsPage = () => {
             </ul>
           </div>
 
-          {thumbs?.length > 0 && (
-            <div className="newsNewsPage__item-block">
-              <Swiper
-                spaceBetween={10}
-                loop={true}
-                pagination={{
-                  el: ".newsNewsPage__pagination",
-                  clickable: true,
-                }}
-                modules={[Thumbs, Pagination]}
-                thumbs={{ swiper: thumbsSwiper }}
-                className="newsNewsPage__main-slider"
-              >
-                {thumbs.map(({ thumbImg, thumbAlt }, idx) => (
-                  <SwiperSlide key={`main-${idx}`}>
-                    <img src={thumbImg} alt={thumbAlt} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-              <div className="newsNewsPage__pagination" />
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={4}
-                watchSlidesProgress
-                slideToClickedSlide
-                modules={[Thumbs]}
-                className="newsNewsPage__thumbs-slider"
-              >
-                {thumbs.map(({ thumbImg, thumbAlt }, idx) => (
-                  <SwiperSlide key={`thumb-${idx}`}>
-                    <img src={thumbImg} alt={thumbAlt} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          )}
+          <div className="newsNewsPage__item-block">
+            <Swiper
+              spaceBetween={10}
+              loop={true}
+              pagination={{
+                el: paginationRef.current,
+                clickable: true,
+              }}
+              modules={[Thumbs, Pagination]}
+              thumbs={{ swiper: thumbsSwiper }}
+              className="newsNewsPage__main-slider"
+            >
+              {thumbs.map(({ thumbImg, thumbAlt }, idx) => (
+                <SwiperSlide key={`main-${idx}`}>
+                  <img src={thumbImg} alt={thumbAlt} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            <div ref={paginationRef} className="newsNewsPage__pagination" />
+
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              spaceBetween={10}
+              slidesPerView={4}
+              watchSlidesProgress
+              slideToClickedSlide
+              modules={[Thumbs]}
+              className="newsNewsPage__thumbs-slider"
+            >
+              {thumbs.map(({ thumbImg, thumbAlt }, idx) => (
+                <SwiperSlide key={`thumb-${idx}`}>
+                  <img src={thumbImg} alt={thumbAlt} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       );
     },
@@ -98,7 +101,7 @@ const NewsNewsPage = () => {
   );
 
   return (
-    <div className="newsNewsPage">
+    <section className="newsNewsPage">
       <div className="container">
         <nav className="pageNav">
           <Link to="/">Главная &gt; </Link>
@@ -108,10 +111,9 @@ const NewsNewsPage = () => {
           </span>
         </nav>
         {setContent(process, renderNewsPage, pageData)}
-
         <Form />
       </div>
-    </div>
+    </section>
   );
 };
 

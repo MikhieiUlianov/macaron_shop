@@ -63,10 +63,10 @@ const NewsPage = () => {
   return (
     <div className="newsPage">
       <div className="container">
-        <div className="pageNav">
+        <nav className="pageNav">
           <Link to={"/"}>Главная &gt; </Link>
           <div className="pageNav__curr "> Новости</div>
-        </div>
+        </nav>
         <h1 className="newsPage__title fz-18 fw-600">Новости</h1>
         <ul className="newsPage__filters">
           {filters.map((filter) => {

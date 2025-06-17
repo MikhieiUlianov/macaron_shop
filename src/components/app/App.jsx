@@ -5,11 +5,11 @@ import "@/sass/libs/grids-min.css";
 import "@/sass/libs/grids-responsive-min.css";
 import "@/sass/style.scss";
 
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import Menu from "../menu/Menu";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Menu from "../Menu/Menu";
 
-import Spinner from "../spinner/Spinner";
+import Spinner from "../Spinner/Spinner";
 import AppRoutesWrapper from "./AppRoutesWrapper";
 
 function App() {
