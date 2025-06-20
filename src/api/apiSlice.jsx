@@ -48,6 +48,15 @@ export const apiSlice = createApi({
     getTry: builder.query({
       queryFn: () => ({ data: siteData.try }),
     }),
+
+    getProductInfo: builder.query({
+      queryFn: (productId) => {
+        const product = siteData.productPage.find((p) => p.id === productId);
+        if (product) {
+          return { data: product };
+        }
+      },
+    }),
   }),
 });
 
@@ -62,4 +71,5 @@ export const {
   useGetCatalogDessertsQuery,
   useGetContactsQuery,
   useGetTryQuery,
+  useGetProductInfoQuery,
 } = apiSlice;

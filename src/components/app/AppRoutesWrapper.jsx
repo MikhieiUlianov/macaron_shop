@@ -20,6 +20,7 @@ const Policy = lazy(() => import("@/components/pages/Policy/Policy"));
 const CatalogDessertsPage = lazy(() =>
   import("@/components/pages/CatalogDessertsPage")
 );
+const ProductPage = lazy(() => import("@/components/pages/ProductPage"));
 
 const AppRoutesWrapper = () => {
   return (
@@ -36,6 +37,7 @@ const AppRoutesWrapper = () => {
       <Route path="/404" element={<Page404 />} />
       <Route path="/policy" element={<Policy />} />
       <Route path="/catalog/desserts" element={<CatalogDessertsPage />} />
+      <Route path="/popularSets/:productId" element={<ProductPage />} />
     </Routes>
   );
 };

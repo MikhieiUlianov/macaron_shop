@@ -70,8 +70,15 @@ const PopularSets = ({ mode = "catalog" }) => {
   }, [popularSets, activeFilters]);
 
   const renderPopularSets = (items) => {
-    return items.map(({ img, alt, price, text, title }, index) => (
-      <div className="popularSets__block" key={index}>
+    if (items.length <= 0) {
+      return (
+        <h2 id="notAvailible" className="fw-600 fz-20">
+          Нет продуктов с таким фильтром :(
+        </h2>
+      );
+    }
+    return items.map(({ id, img, alt, price, text, title }) => (
+      <div className="popularSets__block" key={id}>
         <img src={img} alt={alt} className="popularSets__block-img" />
         <div className="popularSets__block-main">
           <h3 className="popularSets__block-title fz-10 fw-600">{title}</h3>
@@ -79,10 +86,13 @@ const PopularSets = ({ mode = "catalog" }) => {
         </div>
         <div className="popularSets__block-footer">
           <div className="popularSets__block-price fz-14 fw-600">{price}</div>
-          <div className="popularSets__block-footer-subBlock">
+          <Link
+            to={`/popularSets/${id}`}
+            className="popularSets__block-footer-subBlock"
+          >
             <img src={shop} alt="shop" className="popularSets__block-bag" />
             <div className="fz-14 fw-600">В корзину</div>
-          </div>
+          </Link>
         </div>
       </div>
     ));

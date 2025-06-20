@@ -9,12 +9,12 @@ import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
 import "./newsNewsPage.scss";
 
+import ReusableThumbsSlider from "@/utils/ReusableThumbsSlider";
 const NewsNewsPage = () => {
   const { newsPageId } = useParams();
   const { clearError, process, setProcess, getPageData } = useMacaronService();
   const [pageData, setPageData] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const paginationRef = useRef(null);
 
   useEffect(() => {
     clearError();
@@ -58,41 +58,16 @@ const NewsNewsPage = () => {
           </div>
 
           <div className="newsNewsPage__item-block">
-            <Swiper
-              spaceBetween={10}
-              loop={true}
-              pagination={{
-                el: paginationRef.current,
-                clickable: true,
-              }}
-              modules={[Thumbs, Pagination]}
-              thumbs={{ swiper: thumbsSwiper }}
-              className="newsNewsPage__main-slider"
-            >
-              {thumbs.map(({ thumbImg, thumbAlt }, idx) => (
-                <SwiperSlide key={`main-${idx}`}>
-                  <img src={thumbImg} alt={thumbAlt} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            <div ref={paginationRef} className="newsNewsPage__pagination" />
-
-            <Swiper
-              onSwiper={setThumbsSwiper}
-              spaceBetween={10}
-              slidesPerView={4}
-              watchSlidesProgress
-              slideToClickedSlide
-              modules={[Thumbs]}
-              className="newsNewsPage__thumbs-slider"
-            >
-              {thumbs.map(({ thumbImg, thumbAlt }, idx) => (
-                <SwiperSlide key={`thumb-${idx}`}>
-                  <img src={thumbImg} alt={thumbAlt} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <ReusableThumbsSlider
+              thumbs={thumbs}
+              mainSliderClass="newsNewsPage__main-slider"
+              thumbsSliderClass="newsNewsPage__thumbs-slider"
+              paginationClass="newsNewsPage__pagination"
+              enablePagination={true}
+              thumbsSwiper={thumbsSwiper}
+              setThumbsSwiper={setThumbsSwiper}
+              imageKeys={{ img: "thumbImg", alt: "thumbAlt" }} // используем ключи из данных
+            />
           </div>
         </div>
       );

@@ -1,6 +1,11 @@
 .popularSets {
   margin-top: 40px;
   align-items: center;
+
+  #notAvailible {
+    margin: 0 auto;
+    grid-column: 1 / 3;
+  }
   &__filters {
     margin-top: 10px;
     display: flex;

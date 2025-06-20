@@ -1,0 +1,38 @@
+.tabs {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .tabs {
+    display: block;
+    margin-top: 20px;
+    padding: 22px 40px;
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    &__buttons {
+      display: flex;
+      gap: 30px;
+    }
+    .tabs__buttons {
+      &-btn {
+        padding-bottom: 10px;
+        cursor: pointer;
+        &.active {
+          border-bottom: 4px solid $pink;
+        }
+      }
+    }
+    &__content {
+      padding-top: 20px;
+      border-top: 2px solid $gray;
+      margin-top: 16px;
+
+      &-list {
+        padding-top: 20px;
+        font-size: -14px;
+        font-weight: 400;
+      }
+    }
+  }
+}
