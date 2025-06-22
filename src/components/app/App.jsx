@@ -11,6 +11,7 @@ import Menu from "../Menu/Menu";
 
 import Spinner from "../Spinner/Spinner";
 import AppRoutesWrapper from "./AppRoutesWrapper";
+import CartUpdated from "../Modals/CartUpdated/CartUpdated";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </Suspense>
       </main>
       <Footer />
+      <CartUpdated />
     </Router>
   );
 }

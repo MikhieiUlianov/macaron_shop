@@ -3,6 +3,9 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { useGetProductInfoQuery } from "@/api/apiSlice";
 import QueryWrapper from "@/utils/QueryWrapper";
 import Section from "../Section";
+import ReusableThumbsSlider from "@/utils/ReusableThumbsSlider";
+import { toggleModal } from "../Modals/modalsSlice";
+import { updateCart } from "@/components/Cart/cartSlice";
 
 import shop from "/icons/shop.svg";
 import arrow from "/icons/accordion-arrow.svg";
@@ -11,10 +14,10 @@ import selfPickUp from "/icons/productInfo/self-pickup.svg";
 import present from "/icons/productInfo/present.svg";
 import "./productInfo.scss";
 
-import ReusableThumbsSlider from "@/utils/ReusableThumbsSlider";
 const ProductInfo = () => {
   const { productId } = useParams();
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const dispatch = useDispatch();
 
   const {
     data = {},
@@ -23,13 +26,30 @@ const ProductInfo = () => {
     isError,
   } = useGetProductInfoQuery(productId);
 
+  const handleSubmit = ({ data, title, value, modal }) => {
+    dispatch(
+      toggleModal({
+        modal,
+        value,
+        title,
+      })
+    );
+    dispatch(updateCart(data));
+  };
+
   const renderProductInfo = ({
     id,
     thumbs = [],
     title,
+    img,
+    alt,
     text,
+    list,
     price,
     accordions = [],
+    sale,
+    saleName,
+    quantity,
   }) => {
     // Находим аккордеон с "Вкусы:"
     const tastesAccordion = accordions.find((a) => a.title === "Вкусы:");
@@ -82,9 +102,31 @@ const ProductInfo = () => {
 
             <div className="productInfo__price">
               <span className="productInfo__price-price fw-600 fz-18">
-                {price}
+                {price} руб.
               </span>
-              <button className="productInfo__price-btn">
+              <button
+                onClick={() =>
+                  handleSubmit({
+                    modal: "cartUpdated",
+                    value: true,
+                    title: title,
+                    data: {
+                      id,
+                      thumbs,
+                      title,
+                      text,
+                      list,
+                      img,
+                      alt,
+                      price,
+                      sale,
+                      saleName,
+                      quantity: quantity,
+                    },
+                  })
+                }
+                className="productInfo__price-btn"
+              >
                 <img className="productInfo__price-img" src={shop} alt="shop" />
                 <span className="productInfo__price-text fw-600 fz-12">
                   В корзину

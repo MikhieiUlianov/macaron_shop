@@ -1,6 +1,7 @@
 import header from "@/components/Header/headerSlice";
-
 import { apiSlice } from "@/api/apiSlice";
+import modals from "@/components/Modals/modalsSlice.jsx";
+import cart from "@/components/Cart/cartSlice";
 
 const stringMiddleware = () => (next) => (action) => {
   if (typeof action === "string") {
@@ -14,6 +15,8 @@ const stringMiddleware = () => (next) => (action) => {
 const store = configureStore({
   reducer: {
     header,
+    modals,
+    cart,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>

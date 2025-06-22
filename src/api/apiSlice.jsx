@@ -8,8 +8,23 @@ const fakeBaseQuery = async () => {
 export const apiSlice = createApi({
   reducerPath: "siteDataApi",
   baseQuery: fakeBaseQuery,
-  tagTypes: ["CatalogDesserts"],
+  tagTypes: ["CatalogDesserts, Cart"],
   endpoints: (builder) => ({
+    postData: builder.mutation({
+      queryFn: async (newRequest) => {
+        // Генерируем id
+        const id = Math.random().toString(16).slice(2, 6);
+        const requestWithId = { id, ...newRequest };
+
+        // Добавляем в массив "requests"
+        siteData.requests.push(requestWithId);
+
+        return { data: requestWithId };
+      },
+    }),
+    getPromos: builder.query({
+      queryFn: () => ({ data: siteData.promos }),
+    }),
     getPagesLinks: builder.query({
       queryFn: () => ({ data: siteData.pagesLinks }),
     }),
@@ -57,10 +72,16 @@ export const apiSlice = createApi({
         }
       },
     }),
+    getCart: builder.query({
+      queryFn: () => ({ data: siteData.cart }),
+      providesTags: ["Cart"],
+    }),
   }),
 });
 
 export const {
+  usePostDataMutation,
+  useGetPromosQuery,
   useGetPagesLinksQuery,
   useGetPromotionSlidesQuery,
   useGetPopularSetsQuery,
@@ -72,4 +93,5 @@ export const {
   useGetContactsQuery,
   useGetTryQuery,
   useGetProductInfoQuery,
+  useGetCartQuery,
 } = apiSlice;

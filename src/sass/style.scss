@@ -1,6 +1,5 @@
 @use "./ui/buttons.scss";
 @use "./ui/text.scss";
-@use "./ui/inputs.scss";
 
 @import "@/assets/fonts.css";
 @import "@/assets/fontello.css";
@@ -66,7 +65,9 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
+textarea {
+  resize: none;
+}
 a {
   text-decoration: none;
   color: $dark;

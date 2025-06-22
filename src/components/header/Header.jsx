@@ -99,11 +99,11 @@ const Header = () => {
 
           <img src={logo} alt="logo" className="header__logo" />
 
-          <div className="header__shop header__shop-mobile">
+          <Link to={"/cart"} className="header__shop header__shop-mobile">
             <img src={shop} alt="shop" className="header__shop-img" />
             <div className="header__shop-circle"></div>
             <div className="header__shop-counter">1</div>
-          </div>
+          </Link>
         </div>
       </div>
 

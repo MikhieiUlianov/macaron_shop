@@ -21,6 +21,7 @@ const CatalogDessertsPage = lazy(() =>
   import("@/components/pages/CatalogDessertsPage")
 );
 const ProductPage = lazy(() => import("@/components/pages/ProductPage"));
+const CartPage = lazy(() => import("@/components/pages/CartPage"));
 
 const AppRoutesWrapper = () => {
   return (
@@ -38,6 +39,7 @@ const AppRoutesWrapper = () => {
       <Route path="/policy" element={<Policy />} />
       <Route path="/catalog/desserts" element={<CatalogDessertsPage />} />
       <Route path="/popularSets/:productId" element={<ProductPage />} />
+      <Route path="/cart" element={<CartPage />} />
     </Routes>
   );
 };

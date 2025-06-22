@@ -69,13 +69,6 @@
   }
 }
 
-.cart {
-  color: $dark;
-  &:hover {
-    color: $pink;
-  }
-}
-
 @media (min-width: 1200px) {
   .btn-submit {
     width: 254px;
