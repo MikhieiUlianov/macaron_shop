@@ -3,6 +3,7 @@ import phone from "/icons/phone.svg";
 import shop from "/icons/shop.svg";
 import sale from "/icons/sale.svg";
 import logo from "/icons/logo.svg";
+import { Link } from "react-router-dom";
 
 import "./header.scss";
 import Social from "../Social/Social";
@@ -16,6 +17,8 @@ import {
 
 const Header = () => {
   const dispatch = useDispatch();
+
+  const { cart } = useSelector((state) => state.cart);
 
   const {
     activeTown,
@@ -86,14 +89,14 @@ const Header = () => {
               </a>
             </div>
 
-            <div className="header__info-block header__shop">
+            <Link to={"/cart"} className="header__info-block header__shop">
               <img src={shop} alt="shop" className="header__shop-img" />
               <div className="header__shop-circle"></div>
-              <div className="header__shop-counter">1</div>
+              <div className="header__shop-counter">{cart.length}</div>
               <div className="header__shop-text fw-400 fz-14">
-                В корзине (4 товара)
+                В корзине ({cart.length} товара)
               </div>
-            </div>
+            </Link>
             <Social extraWrapperClass="header__info-block header__social" />
           </div>
 
@@ -102,7 +105,7 @@ const Header = () => {
           <Link to={"/cart"} className="header__shop header__shop-mobile">
             <img src={shop} alt="shop" className="header__shop-img" />
             <div className="header__shop-circle"></div>
-            <div className="header__shop-counter">1</div>
+            <div className="header__shop-counter">{cart.length}</div>
           </Link>
         </div>
       </div>

@@ -1,0 +1,98 @@
+.somePresents {
+  margin-top: 30px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  &__card {
+    display: flex; // <— делаем флекс
+    flex-direction: column; // <— по вертикали
+    justify-content: space-between; // распределяем элементы
+    margin: 0 auto;
+    width: 140px;
+    min-height: 238px;
+    padding: 8px;
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+
+    &-img {
+      width: 124px;
+      height: 98px;
+      object-fit: cover;
+    }
+
+    &-title {
+      margin-top: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    &-text {
+      margin-top: 7px;
+      font-size: 10px;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    &-price {
+      margin-top: auto; // <— ключевой момент: отправляет цену вниз
+      padding: 5px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: $pink;
+      border-top: 1px solid rgb(237, 237, 240);
+    }
+  }
+  &__btn {
+    margin: 18px auto 0 auto;
+    width: 189px;
+    min-height: 40px;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .somePresents {
+    &__wrapper {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    &__card {
+      width: auto;
+      min-height: 413px;
+      padding: 22px 15px 10px 15px;
+
+      &-img {
+        width: 242px;
+        height: 192px;
+      }
+
+      &-title {
+        margin-top: 28px;
+        font-size: 18px;
+      }
+
+      &-text {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      &-price {
+        font-size: 18px;
+        padding-top: 10px;
+      }
+    }
+    &__btn {
+      margin: 44px auto 0 auto;
+      width: 254px;
+      min-height: 50px;
+      font-size: 14px;
+    }
+  }
+}

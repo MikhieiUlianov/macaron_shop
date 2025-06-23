@@ -1,14 +1,16 @@
-import QueryWrapper from "@/utils/QueryWrapper";
-import Section from "../Section";
-import { useGetTryQuery } from "@/api/apiSlice";
-
-import shop from "/icons/shop.svg";
-import "./try.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
+
+import QueryWrapper from "@/utils/QueryWrapper";
+import Section from "../Section";
+import { useGetTryQuery } from "@/api/apiSlice";
+import CardLayout from "../CardLayout/CardLayout";
+
+import shop from "/icons/shop.svg";
+import "./try.scss";
 
 import prev from "/icons/prev.svg";
 import next from "/icons/next.svg";
@@ -17,10 +19,10 @@ const Try = () => {
 
   const prevRef = useRef();
   const nextRef = useRef();
-  const renderItems = (items, WrapperTag) => {
+  const renderItems = (items) => {
     return items.map(
       ({ img, alt, title, text, price, prevPrice = null }, index) => (
-        <WrapperTag className="try__item" key={index}>
+        <SwiperSlide className="try__item" key={index}>
           <img src={img} alt={alt} className="try__item-img" />
           <h3 className="try__item-title fz-12 fw-600">{title}</h3>
           <div className="try__item-text fz-10 fw-400">
@@ -52,7 +54,7 @@ const Try = () => {
               <div className="fz-14 fw-600">В корзину</div>
             </div>
           </div>
-        </WrapperTag>
+        </SwiperSlide>
       )
     );
   };
@@ -74,7 +76,7 @@ const Try = () => {
           isError={isError}
           data={data}
         >
-          {renderItems(data, "div")}
+          {CardLayout(data)}
         </QueryWrapper>
       </div>
       <div className="try__wrapper desktop">
@@ -105,7 +107,7 @@ const Try = () => {
               next: nextRef.current,
             }}
           >
-            {renderItems(data, SwiperSlide)}
+            {renderItems(data)}
           </Swiper>
         </QueryWrapper>
       </div>

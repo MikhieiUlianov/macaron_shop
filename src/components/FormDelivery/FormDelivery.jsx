@@ -42,7 +42,6 @@ const FormDelivery = () => {
         return;
       } else {
         const result = await postData({ formData, cart }).unwrap();
-        console.log(result);
         reset();
         dispatch(updateCartOrderData(formData));
         setShowSuccess(true);

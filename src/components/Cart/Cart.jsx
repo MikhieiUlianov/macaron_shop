@@ -1,5 +1,3 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
 import {
   removeProduct,
   increaseQuantity,
@@ -9,6 +7,7 @@ import {
 
 import Section from "../Section";
 import heart from "/img/popularSets/heart.jpeg";
+import roundSet from "/img/popularSets/roundSet.jpeg";
 import "./cart.scss";
 import CartCounter from "../CartCounter/CartCounter";
 import FormDelivery from "../FormDelivery/FormDelivery";
@@ -66,7 +65,7 @@ const Cart = () => {
   // The additional grocery item to add to cart on click
   const additionalItem = {
     id: "saff",
-    img: heart,
+    img: roundSet,
     alt: "heart",
     title: "Набор эклеров",
     list: ["Трюфель", "Малина"],

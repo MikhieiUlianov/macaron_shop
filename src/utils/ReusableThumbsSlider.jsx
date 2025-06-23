@@ -1,4 +1,3 @@
-// ReusableThumbsSlider.jsx
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs, Pagination } from "swiper/modules";

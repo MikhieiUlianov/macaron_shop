@@ -1,7 +1,8 @@
-import { useState, useEffect, useMemo } from "react";
 import { useGetPopularSetsQuery } from "@/api/apiSlice";
 import { Link } from "react-router-dom";
 import QueryWrapper from "@/utils/QueryWrapper";
+import CardLayout from "../CardLayout/CardLayout";
+
 import shop from "/icons/shop.svg";
 import "./popularSets.scss";
 
@@ -69,35 +70,6 @@ const PopularSets = ({ mode = "catalog" }) => {
     );
   }, [popularSets, activeFilters]);
 
-  const renderPopularSets = (items) => {
-    if (items.length <= 0) {
-      return (
-        <h2 id="notAvailible" className="fw-600 fz-20">
-          Нет продуктов с таким фильтром :(
-        </h2>
-      );
-    }
-    return items.map(({ id, img, alt, price, text, title }) => (
-      <div className="popularSets__block" key={id}>
-        <img src={img} alt={alt} className="popularSets__block-img" />
-        <div className="popularSets__block-main">
-          <h3 className="popularSets__block-title fz-10 fw-600">{title}</h3>
-          <div className="popularSets__block-text fw-400 fz-10">{text}</div>
-        </div>
-        <div className="popularSets__block-footer">
-          <div className="popularSets__block-price fz-14 fw-600">{price}</div>
-          <Link
-            to={`/popularSets/${id}`}
-            className="popularSets__block-footer-subBlock"
-          >
-            <img src={shop} alt="shop" className="popularSets__block-bag" />
-            <div className="fz-14 fw-600">В корзину</div>
-          </Link>
-        </div>
-      </div>
-    ));
-  };
-
   return (
     <section className="popularSets">
       <div className="container">
@@ -134,7 +106,7 @@ const PopularSets = ({ mode = "catalog" }) => {
             isFetching={isFetching}
             data={popularSets}
           >
-            {renderPopularSets(filteredItems)}
+            {<CardLayout items={filteredItems} />}
           </QueryWrapper>
         </div>
 

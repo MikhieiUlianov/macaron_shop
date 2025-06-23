@@ -76,6 +76,15 @@ export const apiSlice = createApi({
       queryFn: () => ({ data: siteData.cart }),
       providesTags: ["Cart"],
     }),
+    getSomePresents: builder.query({
+      queryFn: () => ({ data: siteData.somePresents }),
+    }),
+    getCompletedOrders: builder.query({
+      queryFn: () => ({ data: siteData.completedOrdets }),
+    }),
+    getAnswers: builder.query({
+      queryFn: () => ({ data: siteData.answers }),
+    }),
   }),
 });
 
@@ -94,4 +103,7 @@ export const {
   useGetTryQuery,
   useGetProductInfoQuery,
   useGetCartQuery,
+  useGetSomePresentsQuery,
+  useGetCompletedOrdersQuery,
+  useGetAnswersQuery,
 } = apiSlice;

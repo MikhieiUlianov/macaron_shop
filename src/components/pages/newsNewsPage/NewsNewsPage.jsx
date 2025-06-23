@@ -1,9 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Thumbs, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/thumbs";
-import "swiper/css/pagination";
-
 import Form from "@/components/form/Form";
 import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
