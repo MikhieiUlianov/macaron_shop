@@ -85,6 +85,12 @@ export const apiSlice = createApi({
     getAnswers: builder.query({
       queryFn: () => ({ data: siteData.answers }),
     }),
+    getOurSuggestions: builder.query({
+      queryFn: () => ({ data: siteData.ourSuggestions }),
+    }),
+    getRecommendation: builder.query({
+      queryFn: () => ({ data: siteData.recommendation }),
+    }),
   }),
 });
 
@@ -106,4 +112,6 @@ export const {
   useGetSomePresentsQuery,
   useGetCompletedOrdersQuery,
   useGetAnswersQuery,
+  useGetOurSuggestionsQuery,
+  useGetRecommendationQuery,
 } = apiSlice;

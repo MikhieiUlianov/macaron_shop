@@ -23,6 +23,9 @@ const CatalogDessertsPage = lazy(() =>
 const ProductPage = lazy(() => import("@/components/pages/ProductPage"));
 const CartPage = lazy(() => import("@/components/pages/CartPage"));
 const CorporatePage = lazy(() => import("@/components/pages/CorporatePage"));
+const SuggestionsPage = lazy(() =>
+  import("@/components/pages/SuggestionsPage")
+);
 
 const AppRoutesWrapper = () => {
   return (
@@ -42,6 +45,7 @@ const AppRoutesWrapper = () => {
       <Route path="/popularSets/:productId" element={<ProductPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/corporate" element={<CorporatePage />} />
+      <Route path="/suggestions" element={<SuggestionsPage />} />
     </Routes>
   );
 };

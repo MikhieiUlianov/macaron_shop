@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import "./form.scss";
 import useMacaronService from "@/services/MacaronService";
+import Section from "../Section";
 
 const Form = () => {
   const { postData } = useMacaronService();
@@ -29,7 +30,7 @@ const Form = () => {
   };
 
   return (
-    <section className="form">
+    <Section sectionClass={"form"}>
       <h2 className="form__title fz-18 fw-600">
         Заказать расчёт или отправить запрос на сотрудничество
       </h2>
@@ -163,7 +164,7 @@ const Form = () => {
           </Link>
         </div>
       </form>
-    </section>
+    </Section>
   );
 };
 

@@ -59,6 +59,10 @@ import macaronsSeal from "/img/corporate/macarons-seal.png";
 import set70 from "/img/corporate/set-70.png";
 import round40 from "/img/corporate/round-set-40.png";
 
+//recommendation
+
+import edge from "/img/edge.png";
+
 // —––––––––– ДАННЫЕ —–––––––––
 const siteData = {
   social: [
@@ -94,7 +98,7 @@ const siteData = {
       title: "Для бизнеса",
       links: [
         { label: "Корпоративные подарки", to: "/corporate" },
-        { label: "Для юридических лиц", to: "/legal-entities" },
+        { label: "Для юридических лиц", to: "/suggestions" },
         { label: "Оповикам", to: "/wholesale" },
       ],
       id: "3e7c",
@@ -646,53 +650,70 @@ const siteData = {
       text: "Как уже неоднократно упомянуто, сторонники тоталитаризма в науке освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.",
     },
   ],
+  ourSuggestions: [
+    { img: corporateGift, alt: "some alt", title: "Корпоративные подарки" },
+    {
+      img: corporateGift,
+      alt: "some alt",
+      title: "Сотрудничество с интернет магазинами",
+    },
+    {
+      img: corporateGift,
+      alt: "some alt",
+      title: "Сотрудничество с кафе и ресторанами",
+    },
+    {
+      img: corporateGift,
+      alt: "some alt",
+      title: "Сотрудничество с кофейнями",
+    },
+    { img: corporateGift, alt: "some alt", title: "Сотрудничество с отелями" },
+    { img: corporateGift, alt: "some alt", title: "Для Retail" },
+    {
+      img: corporateGift,
+      alt: "some alt",
+      title: "Кенди бары для мероприятий",
+    },
+    { img: corporateGift, alt: "some alt", title: "И для других сфер бизнеса" },
+  ],
+  recommendation: [
+    {
+      title: "Заголовок отзыва",
+      text: "Рыба-текст отзыва. Сюда можно не текст, а фоточки благодарностей вставить Выражаем благодарность Макароншоп за самые лучшие макаронс в Санкт-Петербурге и в мире. ",
+      name: "Иванов Иван Генеральный директор ООО “ААА”",
+      img: edge,
+      alt: "Microsoft edge",
+    },
+
+    {
+      title: "Заголовок отзыва",
+      text: "Банальные, но неопровержимые выводы, а также представители современных социальных резервов ассоциативно распределены по отраслям. Противоположная точка зрения подразумевает, что многие известные личности могут быть обнародованы.  ",
+      name: "Иванов Иван Генеральный директор ООО “ААА”",
+      img: edge,
+      alt: "Microsoft edge",
+    },
+    {
+      title: "Заголовок отзыва",
+      text: "Отзыв блаблабла ",
+      name: "Иванов Иван Генеральный директор ООО “ААА”",
+      img: edge,
+      alt: "Microsoft edge",
+    },
+    {
+      title: "Заголовок отзыва",
+      text: "Ключевые особенности структуры проекта неоднозначны и будут указаны как претенденты на роль ключевых факторов. А также явные признаки победы институционализации будут заблокированы в рамках своих собственных рациональных ограничений. Элементы политического процесса функционально разнесены на независимые элементы. В своём стремлении улучшить пользовательский опыт мы упускаем, что представители современных социальных резервов обнародованы.",
+      img: edge,
+      name: "Иванов Иван Генеральный директор ООО “ААА”",
+      alt: "Microsoft edge",
+    },
+  ],
   promos: [
     {
       promo: "SUMMER2025",
       sale: "150",
     },
   ],
-  requests: [
-    {
-      id: "9c30",
-      name: "54545",
-      email: "wefwef@gmail.com",
-      phone: "454545454544",
-      companyName: "4454554",
-      message: "444444444444444444",
-    },
-    {
-      id: "8c9b",
-      name: "557575",
-      email: "wefwef@gmail.com",
-      phone: "757567567575",
-      companyName: "908",
-      message: "",
-    },
-    {
-      id: "a585",
-      name: "557575",
-      email: "wefwef@gmail.com",
-      phone: "757567567575",
-      companyName: "908",
-      message: "",
-    },
-    {
-      id: "3f18",
-      name: "6456456456",
-      email: "wefwef@gmail.com",
-      phone: "456456455645",
-      companyName: "4565",
-      message: "",
-    },
-    {
-      id: "22d6",
-      name: "3463456346",
-      phone: "6456456456",
-      companyName: "4564565",
-      email: "wefwef@gmail.com",
-    },
-  ],
+  requests: [],
 };
 
 export default siteData;
