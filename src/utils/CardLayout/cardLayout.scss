@@ -57,7 +57,7 @@
 @media (min-width: 768px) {
   .cardLayout {
     &__block {
-      width: 370px;
+      width: 355px;
       min-height: 459px;
       &-title {
         font-size: 18px;
@@ -79,7 +79,7 @@
         padding: 21px;
       }
       &-footer {
-        grid-template-columns: 220px 150px;
+        grid-template-columns: 1fr 1fr;
         min-height: 50px;
 
         &-subBlock {

@@ -91,6 +91,9 @@ export const apiSlice = createApi({
     getRecommendation: builder.query({
       queryFn: () => ({ data: siteData.recommendation }),
     }),
+    getWeddingSets: builder.query({
+      queryFn: () => ({ data: siteData.weddingSets }),
+    }),
   }),
 });
 
@@ -114,4 +117,5 @@ export const {
   useGetAnswersQuery,
   useGetOurSuggestionsQuery,
   useGetRecommendationQuery,
+  useGetWeddingSetsQuery,
 } = apiSlice;

@@ -1,9 +1,8 @@
 import { useGetPopularSetsQuery } from "@/api/apiSlice";
 import { Link } from "react-router-dom";
 import QueryWrapper from "@/utils/QueryWrapper";
-import CardLayout from "../CardLayout/CardLayout";
+import CardLayout from "../../utils/CardLayout/CardLayout";
 
-import shop from "/icons/shop.svg";
 import "./popularSets.scss";
 
 const PopularSets = ({ mode = "catalog" }) => {

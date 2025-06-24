@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import QueryWrapper from "@/utils/QueryWrapper";
 import Section from "../Section";
 import { useGetTryQuery } from "@/api/apiSlice";
-import CardLayout from "../CardLayout/CardLayout";
+import CardLayout from "../../utils/CardLayout/CardLayout";
 
 import shop from "/icons/shop.svg";
 import "./try.scss";
@@ -76,7 +76,7 @@ const Try = () => {
           isError={isError}
           data={data}
         >
-          {CardLayout(data)}
+          <CardLayout items={data} />
         </QueryWrapper>
       </div>
       <div className="try__wrapper desktop">
@@ -98,7 +98,6 @@ const Try = () => {
             spaceBetween={30}
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
-              // 👇 Ключевой момент: присваиваем элементы напрямую
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
             }}

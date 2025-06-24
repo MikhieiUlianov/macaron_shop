@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./form.scss";
 import useMacaronService from "@/services/MacaronService";
 import Section from "../Section";
+import FormField from "@/utils/FormField";
 
 const Form = () => {
   const { postData } = useMacaronService();
@@ -20,9 +22,7 @@ const Form = () => {
       await postData(data);
       setSuccess(true);
       reset();
-      setTimeout(() => {
-        setSuccess("");
-      }, 5000);
+      setTimeout(() => setSuccess(null), 5000);
     } catch (error) {
       console.error("Ошибка отправки:", error);
       setSuccess(false);
@@ -30,116 +30,84 @@ const Form = () => {
   };
 
   return (
-    <Section sectionClass={"form"}>
+    <Section sectionClass="form">
       <h2 className="form__title fz-18 fw-600">
         Заказать расчёт или отправить запрос на сотрудничество
       </h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form__wrapper">
-          <div className="form__label">
-            <label className="fw-400 fz-12" htmlFor="name">
-              Имя
-            </label>
-            <input
-              id="name"
-              className={`form__input ${
-                errors.name ? "form__input--error" : ""
-              }`}
-              placeholder="Укажите имя"
-              {...register("name", { required: "Имя обязательно" })}
-            />
-            {errors.name && (
-              <p className="form__error">{errors.name.message}</p>
-            )}
-          </div>
+          <FormField
+            label="Имя"
+            id="name"
+            placeholder="Укажите имя"
+            registerName="name"
+            register={register}
+            errors={errors}
+            errorConfig={{ required: "Имя обязательно" }}
+          />
 
-          <div className="form__label">
-            <label className="fw-400 fz-12" htmlFor="email">
-              Email
-            </label>
-            <input
-              id="email"
-              className={`form__input ${
-                errors.email ? "form__input--error" : ""
-              }`}
-              placeholder="Email"
-              {...register("email", {
-                required: "Email обязателен",
-                pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: "Неверный формат email",
-                },
-              })}
-            />
-            {errors.email && (
-              <p className="form__error">{errors.email.message}</p>
-            )}
-          </div>
+          <FormField
+            label="Email"
+            id="email"
+            placeholder="Email"
+            type="email"
+            registerName="email"
+            register={register}
+            errors={errors}
+            errorConfig={{
+              required: "Email обязателен",
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: "Неверный формат email",
+              },
+            }}
+          />
 
-          <div className="form__label">
-            <label className="fw-400 fz-12" htmlFor="phone">
-              Телефон
-            </label>
-            <input
-              id="phone"
-              className={`form__input ${
-                errors.phone ? "form__input--error" : ""
-              }`}
-              placeholder="+7 (___) ___-__-__"
-              {...register("phone", {
-                required: "Телефон обязателен",
-                pattern: {
-                  value: /^\+?[0-9\s\-()]{10,18}$/,
-                  message: "Неверный формат телефона",
-                },
-              })}
-            />
-            {errors.phone && (
-              <p className="form__error">{errors.phone.message}</p>
-            )}
-          </div>
+          <FormField
+            label="Телефон"
+            id="phone"
+            placeholder="+7 (___) ___-__-__"
+            type="tel"
+            registerName="phone"
+            register={register}
+            errors={errors}
+            errorConfig={{
+              required: "Телефон обязателен",
+              pattern: {
+                value: /^\+?[0-9\s\-()]{10,18}$/,
+                message: "Неверный формат телефона",
+              },
+            }}
+          />
 
-          <div className="form__label">
-            <label className="fw-400 fz-12" htmlFor="companyName">
-              Компания
-            </label>
-            <input
-              id="companyName"
-              className={`form__input ${
-                errors.companyName ? "form__input--error" : ""
-              }`}
-              placeholder="Название компании"
-              {...register("companyName", {
-                required: "Название компании обязательно",
-              })}
-            />
-            {errors.companyName && (
-              <p className="form__error">{errors.companyName.message}</p>
-            )}
-          </div>
+          <FormField
+            label="Компания"
+            id="companyName"
+            placeholder="Название компании"
+            registerName="companyName"
+            register={register}
+            errors={errors}
+            errorConfig={{
+              required: "Название компании обязательно",
+            }}
+          />
 
-          <div className="form__label">
-            <label className="fw-400 fz-12" htmlFor="message">
-              Сообщение
-            </label>
-            <textarea
-              id="message"
-              className={`form__textarea ${
-                errors.message ? "form__input--error" : ""
-              }`}
-              placeholder="Ваше сообщение"
-              {...register("message", {
-                minLength: {
-                  value: 10,
-                  message: "Минимум 10 символов",
-                },
-              })}
-            />
-            {errors.message && (
-              <p className="form__error">{errors.message.message}</p>
-            )}
-          </div>
+          <FormField
+            label="Сообщение"
+            id="message"
+            placeholder="Ваше сообщение"
+            as="textarea"
+            registerName="message"
+            register={register}
+            errors={errors}
+            errorConfig={{
+              minLength: {
+                value: 10,
+                message: "Минимум 10 символов",
+              },
+            }}
+          />
         </div>
 
         <button type="submit" className="btn-submit fz-14 fw-400">
@@ -158,8 +126,8 @@ const Form = () => {
         )}
 
         <div className="form__policy fz-12 fw-400">
-          Нажимая на кнопку "Оформить заказ", вы принимаете условия
-          <Link to={"/policy"} className="form__policy-link">
+          Нажимая на кнопку "Оформить заказ", вы принимаете условия{" "}
+          <Link to="/policy" className="form__policy-link">
             Политики конфиденциальности
           </Link>
         </div>

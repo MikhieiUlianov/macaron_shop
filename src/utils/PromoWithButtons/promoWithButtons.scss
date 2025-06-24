@@ -1,6 +1,9 @@
-.wholesale {
+.promoWithButtons {
   padding-top: 12px;
   background: rgb(247, 247, 247);
+  &__wrapper {
+    padding: 0 15px 15px 15px;
+  }
   &__title {
     margin-top: 40px;
   }
@@ -12,6 +15,10 @@
     width: 267px;
     height: 210px;
     object-fit: cover;
+  }
+  .extraImgClass {
+    width: 197px;
+    height: 312px;
   }
   &__btns {
     margin-top: 12px;
@@ -37,7 +44,7 @@
 }
 
 @media (min-width: 1200px) {
-  .wholesale {
+  .promoWithButtons {
     &__wrapper {
       padding-top: 80px;
       display: grid;
@@ -75,6 +82,10 @@
       width: 469px;
       height: 369px;
       margin: 0;
+    }
+    .extraImgClass {
+      width: 303px;
+      height: 479px;
     }
     &__btns {
       gap: 10px;

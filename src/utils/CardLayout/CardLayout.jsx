@@ -13,13 +13,13 @@ const CardLayout = ({ items }) => {
 
   return items.map(({ id, img, alt, price, text, title }) => (
     <div className="cardLayout__block" key={id}>
-      <img src={img} alt={alt} className="popularSets__block-img" />
+      <img src={img} alt={alt} className="cardLayout__block-img" />
       <div className="cardLayout__block-main">
         <h3 className="cardLayout__block-title fz-10 fw-600">{title}</h3>
         <div className="cardLayout__block-text fw-400 fz-10">{text}</div>
       </div>
       <div className="cardLayout__block-footer">
-        <div className="cardLayout__block-price fz-14 fw-600">{price}</div>
+        <div className="cardLayout__block-price fz-14 fw-600">{price} руб.</div>
         <Link
           to={`/popularSets/${id}`}
           className="cardLayout__block-footer-subBlock"

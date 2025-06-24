@@ -63,6 +63,9 @@ import round40 from "/img/corporate/round-set-40.png";
 
 import edge from "/img/edge.png";
 
+//weedingSets
+import weddingSet from "/img/wedding-cake.png";
+
 // —––––––––– ДАННЫЕ —–––––––––
 const siteData = {
   social: [
@@ -541,6 +544,7 @@ const siteData = {
       text: "промо-набор",
       price: 90,
       prevPrice: 160,
+      id: "em67e57w4m1",
     },
     {
       img: macaronEclair,
@@ -549,6 +553,7 @@ const siteData = {
       text: "промо-набор",
       price: 90,
       prevPrice: 160,
+      id: ".7mw47w71",
     },
     {
       img: macaronEclairS,
@@ -556,6 +561,7 @@ const siteData = {
       title: "Всего понемногу ",
       text: "3 эклера, 4 трубочки, 6 макарун. <br/>Вкусы: клубника - базилик, кокос, голубой сыр, пармезан",
       price: 750,
+      id: "3n567327w5on441",
     },
     {
       img: macaronEclairM,
@@ -563,6 +569,7 @@ const siteData = {
       title: "Ещё побольше",
       text: "3 эклера, 4 трубочки, 6 макарун. <br/>Вкусы: клубника - базилик, кокос, голубой сыр, пармезан",
       price: 3900,
+      id: "1547245777247",
     },
     {
       img: macaronEclairL,
@@ -570,6 +577,7 @@ const siteData = {
       title: "Ещё побольше",
       text: "3 эклера, 4 трубочки, 6 макарун. <br/>Вкусы: клубника - базилик, кокос, голубой сыр, пармезан",
       price: 3900,
+      id: "184n678i3573",
     },
   ],
   somePresents: [
@@ -705,6 +713,56 @@ const siteData = {
       img: edge,
       name: "Иванов Иван Генеральный директор ООО “ААА”",
       alt: "Microsoft edge",
+    },
+  ],
+  weddingSets: [
+    {
+      img: weddingSet,
+      alt: "awesome weeding set for weedings",
+      title: "Большая пирамида (10 этажей) ",
+      text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
+      price: "14400 руб",
+      id: ",0482b5427",
+    },
+    {
+      img: weddingSet,
+      alt: "awesome weeding set for weedings",
+      title: "Большая пирамида (10 этажей) ",
+      text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
+      price: "14400 руб",
+      id: ",04qyvb,p6p9",
+    },
+    {
+      img: weddingSet,
+      alt: "awesome weeding set for weedings",
+      title: "Большая пирамида (10 этажей) ",
+      text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
+      price: "14400 руб",
+      id: "c458m46354",
+    },
+    {
+      img: weddingSet,
+      alt: "awesome weeding set for weedings",
+      title: "Большая пирамида (10 этажей) ",
+      text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
+      price: "14400 руб",
+      id: "0.6890555m",
+    },
+    {
+      img: weddingSet,
+      alt: "awesome weeding set for weedings",
+      title: "Большая пирамида (10 этажей) ",
+      text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
+      price: "14400 руб",
+      id: "3c§234§24",
+    },
+    {
+      img: weddingSet,
+      alt: "awesome weeding set for weedings",
+      title: "Большая пирамида (10 этажей) ",
+      text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
+      price: "14400 руб",
+      id: "5n832n24576q",
     },
   ],
   promos: [
