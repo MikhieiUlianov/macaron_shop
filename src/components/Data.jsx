@@ -66,6 +66,27 @@ import edge from "/img/edge.png";
 //weedingSets
 import weddingSet from "/img/wedding-cake.png";
 
+//assemble
+
+import macaronSet9 from "/img/macaronSets/macaronSet-9.png";
+import macaronSet12 from "/img/macaronSets/macaronSet-12.png";
+import macaronSet24 from "/img/macaronSets/macaronSet-24.png";
+import macaronSet48 from "/img/macaronSets/macaronSet-48.png";
+import macaronSet40 from "/img/macaronSets/macaronSet-40.png";
+
+//tastes
+
+import chocBanan from "/img/tastes/choc-banan.png";
+import seaBuckthorn from "/img/tastes/seaBuckthorn.png";
+import truffle from "/img/tastes/truffle.png";
+import blueCheese from "/img/tastes/blueCheese.png";
+import parmesan from "/img/tastes/parmesan.png";
+import pesto from "/img/tastes/pesto.png";
+
+//additionally
+
+import plug from "/img/plug.jpeg";
+
 // —––––––––– ДАННЫЕ —–––––––––
 const siteData = {
   social: [
@@ -90,7 +111,10 @@ const siteData = {
       links: [
         { label: "Каталог десертов", to: "/catalog" },
         { label: "Готовые наборы", to: "/sets" },
-        { label: "Собрать свой набор", to: "/constructor" },
+        {
+          label: "Собрать свой набор",
+          to: "/assemble-custom-set/select-amount",
+        },
         { label: "Наборы с печатью", to: "/printed-sets" },
         { label: "Свадебные предложения", to: "/wedding" },
         { label: "Акции", to: "/sales" },
@@ -763,6 +787,116 @@ const siteData = {
       text: "Для свадьбы или банкета, 240 макарон по вашему выбору ",
       price: "14400 руб",
       id: "5n832n24576q",
+    },
+  ],
+  assemble: [
+    {
+      id: "wgrwgerb",
+      img: macaronSet9,
+      title: "Набор из 6 макарон",
+      price: "350",
+    },
+    {
+      id: "wgrwger870b",
+      img: macaronSet12,
+      title: "Набор из 12 макарон",
+      price: "700",
+    },
+    {
+      id: "wgrewbewgerb",
+      img: macaronSet24,
+      title: "Набор из 24 макарон",
+      price: "1400",
+    },
+    {
+      id: "wgrwgeä+0rb",
+      img: macaronSet48,
+      title: "Набор из 48 макарон",
+      price: "2800",
+    },
+    {
+      id: "w21x4grwgerb",
+      img: macaronSet40,
+      title: "Набор из 40 макарон в круглой коробке",
+      price: "3000",
+    },
+    {
+      id: "wgrwgbbbberb",
+      img: macaronSet40,
+      title: "Набор из 70 макарон в круглой коробке",
+      price: "5000",
+    },
+  ],
+  tastes: [
+    {
+      img: chocBanan,
+      alt: "Шоколад, банан",
+      title: "Шоколад, банан",
+      text: "Сезонный вкус: молочный  шоколад, отборные свежие бананы",
+      id: "138vgn7610398ljj",
+    },
+    {
+      img: seaBuckthorn,
+      alt: "Облепиха, розмарин",
+      title: "Облепиха, розмарин",
+      text: "Сезонный вкус: белый шоколад, свежие ягоды облепихи, немного розмарина",
+      id: "138vgn7610390.8",
+    },
+    {
+      img: truffle,
+      alt: "macaron with truffle",
+      title: "Чёрный трюфель",
+      text: "Белый шоколад, сливки и паста из летнего чёрного итальянского трюфеля.",
+      id: "138vgn76103k898",
+    },
+    {
+      img: blueCheese,
+      alt: "macaron with blueCheese",
+      title: "Голубой сыр",
+      text: "Наш самы пикантный и один из самых популярных вкусов. Это нужно попробовать!",
+      id: "138vn7610398",
+    },
+
+    {
+      img: parmesan,
+      alt: "macaron with parmesan",
+      title: "Пармезан",
+      text: "Пикантный сладко-соленый вкус. Начинка изготавливается с использованием настоящего итальянского сыра Parmigiano Reggiano и Grana Padano категории DOP.",
+      id: "138vn76867810398",
+    },
+    {
+      img: pesto,
+      alt: "macaron with pesto",
+      title: "Песто ",
+      text: "Внутри ингредиетны классического песто - свежий ароматный базилик, итальянский пармезан, кедровые орешки и всё это в виде ганаша на белом шоколаде.",
+      id: "18vgn7610398",
+    },
+  ],
+  additionally: [
+    {
+      img: plug,
+      title: "Открыточка с пожеланием",
+      price: "30",
+      id: "v374+1c2m4058§7gx4751",
+    },
+    {
+      img: plug,
+      title: "Открытка 2",
+      price: "50",
+      id: "v1374+1c2m4058§7gx451",
+    },
+    {
+      img: plug,
+      title: "Лента атласная",
+      price: "0",
+      id: "v1374+1c2m458§7gx4751",
+    },
+    {
+      img: plug,
+      title: "Набор эклеров 6 шт.",
+      sale: "600",
+      price: "450",
+      id: "v1374+c2m4058§7gx4751",
     },
   ],
   promos: [

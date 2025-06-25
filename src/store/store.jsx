@@ -2,6 +2,7 @@ import header from "@/components/Header/headerSlice";
 import { apiSlice } from "@/api/apiSlice";
 import modals from "@/components/Modals/modalsSlice.jsx";
 import cart from "@/components/Cart/cartSlice";
+import assemble from "@/components/Assemble/assembleSlice";
 
 const stringMiddleware = () => (next) => (action) => {
   if (typeof action === "string") {
@@ -17,6 +18,7 @@ const store = configureStore({
     header,
     modals,
     cart,
+    assemble,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>

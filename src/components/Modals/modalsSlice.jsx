@@ -1,6 +1,7 @@
 const initialState = {
   cartUpdated: false,
   cartUpdatedTitle: "",
+  customSet: false,
 };
 
 const modalsSlice = createSlice({

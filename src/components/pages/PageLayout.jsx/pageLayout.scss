@@ -1,0 +1,210 @@
+.pageLayout {
+  padding-top: 12px;
+  &__title {
+    margin-top: 17px;
+  }
+  &__wrapper {
+    margin-top: 9px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  &__item {
+    margin: 0 auto;
+    padding: 8px;
+    width: 140px;
+    min-height: 215px;
+    border: 1px solid rgb(237, 237, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    &-img {
+      width: 91px;
+      height: 86px;
+      object-fit: cover;
+    }
+    &-title {
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    &-text {
+      margin-top: 8px;
+      opacity: 0.8;
+      font-size: 10px;
+      font-weight: 400;
+      text-align: center;
+    }
+    &-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: auto;
+      border-top: 1px solid rgb(237, 237, 240);
+      gap: 0px;
+      div {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      span {
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        display: flex;
+        border: 1px solid rgb(237, 237, 240);
+        border-radius: 3px;
+        background: rgb(255, 255, 255);
+        cursor: pointer;
+      }
+      #extraWrapper {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      &-price {
+        color: $pink;
+        &-sale {
+          text-align: left;
+          text-decoration: line-through;
+          margin-top: 15px;
+          color: rgb(150, 150, 150);
+        }
+      }
+    }
+
+    #extraFooterClass {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__counter {
+    width: 270px;
+    min-height: 475px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    &-title {
+      padding: 27px;
+      span {
+        color: $pink;
+      }
+    }
+    &-list {
+      padding: 15px 0;
+      border-top: 1px solid rgb(234, 234, 234);
+      border-bottom: 1px solid rgb(234, 234, 234);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      &-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        div {
+          display: flex;
+          align-items: center;
+          text-align: left;
+        }
+        &-remove {
+          cursor: pointer;
+          margin-right: auto;
+        }
+        #divider {
+          display: flex;
+          gap: 30px;
+          div {
+            gap: 10px;
+          }
+          span {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(237, 237, 240);
+            border-radius: 3px;
+            background: rgb(255, 255, 255);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    &-text {
+      margin-top: 15px;
+    }
+    &-btns {
+      display: flex;
+      margin-top: 25px;
+      flex-direction: column;
+      gap: 8px;
+      &-btn {
+        width: 222px;
+        min-height: 40px;
+        align-content: center;
+        background: $pink;
+        color: white;
+        border-radius: 3px;
+      }
+      #assembleMore {
+        color: $pink;
+        background: white;
+        border: 1px solid $pink;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .pageLayout {
+    padding: 37px 0;
+
+    &__mainWrapper {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 30px;
+      margin-top: 39px;
+    }
+    &__title {
+      margin-top: 24px;
+      font-size: 30px;
+    }
+    &__wrapper {
+      margin-top: 0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    &__item {
+      padding: 15px;
+      width: 270px;
+      min-height: 370px;
+      &-img {
+        width: 180.52px;
+        height: 170px;
+      }
+      &-title {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      &-text {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+
+      &-footer-price {
+        color: $pink;
+        font-size: 18px;
+      }
+    }
+    &__counter {
+      margin: 0;
+    }
+  }
+}

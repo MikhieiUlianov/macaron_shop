@@ -6,7 +6,6 @@ import {
 } from "./cartSlice";
 
 import Section from "../Section";
-import heart from "/img/popularSets/heart.jpeg";
 import roundSet from "/img/popularSets/roundSet.jpeg";
 import "./cart.scss";
 import CartCounter from "../CartCounter/CartCounter";

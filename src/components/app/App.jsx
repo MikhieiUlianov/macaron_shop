@@ -12,6 +12,7 @@ import Menu from "../Menu/Menu";
 import Spinner from "../Spinner/Spinner";
 import AppRoutesWrapper from "./AppRoutesWrapper";
 import CartUpdated from "../Modals/CartUpdated/CartUpdated";
+import CustomSet from "../Modals/CustomSet/CustomSet";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       </main>
       <Footer />
       <CartUpdated />
+      <CustomSet />
     </Router>
   );
 }

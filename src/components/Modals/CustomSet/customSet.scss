@@ -1,0 +1,110 @@
+.customSet {
+  &__wrapper {
+    padding: 23px 13px;
+    margin-top: 10px;
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    width: 288px;
+    min-height: 373px;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    gap: 5px;
+    span {
+      color: $pink;
+    }
+  }
+  &__list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &-item {
+      opacity: 0.8;
+      text-align: left;
+    }
+  }
+  &__finalPrice {
+    margin-top: 12px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(237, 237, 240);
+    border-bottom: 1px solid rgb(237, 237, 240);
+    text-align: left;
+    span {
+      color: $pink;
+    }
+  }
+  &__btns {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    #blue {
+      border: 1px solid $blue;
+      color: $dark;
+      background: white;
+    }
+    &-btn {
+      width: 189px;
+      min-height: 40px;
+      background: $pink;
+      color: white;
+      align-content: center;
+      border-radius: 3px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .customSet {
+    &__title {
+      font-size: 30px;
+    }
+    &__wrapper {
+      padding: 45px 35px;
+      margin-top: 25px;
+      width: 570px;
+      min-height: 40px;
+    }
+
+    &__subtitle {
+      margin-top: 15px;
+      font-size: 18px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+    &__list {
+      gap: 7px;
+      &-item {
+        font-size: 14px;
+      }
+    }
+    &__finalPrice {
+      margin-top: 25px;
+      padding: 18px 0;
+      font-size: 18px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+    &__btns {
+      margin-top: 25px;
+      flex-direction: row;
+      &-btn {
+        width: 234px;
+        min-height: 50px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+  }
+}

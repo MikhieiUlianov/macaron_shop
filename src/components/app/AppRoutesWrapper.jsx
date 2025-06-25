@@ -27,6 +27,13 @@ const SuggestionsPage = lazy(() =>
   import("@/components/pages/SuggestionsPage")
 );
 const WeddingPage = lazy(() => import("@/components/pages/WeddingPage"));
+const AssemblePage = lazy(() => import("@/components/pages/AssemblePage"));
+const TastesPage = lazy(() =>
+  import("@/components/pages/TastesPage/TastesPage")
+);
+const AdditionallyPage = lazy(() =>
+  import("@/components/pages/AdditionallyPage/AdditionallyPage")
+);
 
 const AppRoutesWrapper = () => {
   return (
@@ -48,11 +55,19 @@ const AppRoutesWrapper = () => {
       <Route path="/corporate" element={<CorporatePage />} />
       <Route path="/suggestions" element={<SuggestionsPage />} />
       <Route path="/wedding" element={<WeddingPage />} />
+      <Route
+        path="/assemble-custom-set/select-amount"
+        element={<AssemblePage />}
+      />
+      <Route
+        path="/assemble-custom-set/select-amount/tastes"
+        element={<TastesPage />}
+      />
+      <Route
+        path="/assemble-custom-set/select-amount/tastes/additionally"
+        element={<AdditionallyPage />}
+      />
     </Routes>
   );
 };
-/* if (isError) {
-  return <Navigate to={"/404"} />;
-}
- */
 export default AppRoutesWrapper;
