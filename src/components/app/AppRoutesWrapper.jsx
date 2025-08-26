@@ -4,13 +4,19 @@ const PopularSetsPage = lazy(() =>
 );
 const NewsPage = lazy(() => import("@/components/pages/NewsPageFolder/page"));
 const GuaranteesPage = lazy(() =>
-  import("@/components/pages/GuaranteesPage/page")
+  import("@/components/pages/GuaranteesPageFolder/page")
 );
-const DeliveryPage = lazy(() => import("@/components/pages/DeliveryPage/page"));
-const NewsNewsPage = lazy(() => import("@/components/pages/NewsNewsPage/page"));
-const ContactsPage = lazy(() => import("@/components/pages/ContactsPage/page"));
-const Page404 = lazy(() => import("@/components/pages/Page404/page"));
-const Policy = lazy(() => import("@/components/pages/Policy/page"));
+const DeliveryPage = lazy(() =>
+  import("@/components/pages/DeliveryPageFolder/page")
+);
+const NewsNewsPage = lazy(() =>
+  import("@/components/pages/NewsNewsPageFolder/page")
+);
+const ContactsPage = lazy(() =>
+  import("@/components/pages/ContactsPageFolder/page")
+);
+const Page404 = lazy(() => import("@/components/pages/Page404Folder/page"));
+const Policy = lazy(() => import("@/components/pages/PolicyFolder/page"));
 const CatalogDessertsPage = lazy(() =>
   import("@/components/pages/CatalogDessertsPage")
 );
