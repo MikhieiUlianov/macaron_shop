@@ -1,9 +1,15 @@
 import Cart from "../Cart/cart";
 import Try from "../Try";
 
+import { Helmet } from "react-helmet";
 const CartPage = () => {
   return (
     <>
+      {" "}
+      <Helmet>
+        <meta name="Cart" content="Cart Page" />
+        <title>Cart Page</title>
+      </Helmet>
       <Cart />
       <Try />
     </>

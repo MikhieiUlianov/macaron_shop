@@ -6,9 +6,15 @@ import PopularSets from "@/components/PopularSets";
 import News from "../News";
 import Steps from "../Steps";
 
+import { Helmet } from "react-helmet";
 const MainPage = () => {
   return (
     <>
+      {" "}
+      <Helmet>
+        <meta name="Main" content="Main Page" />
+        <title>Main Page</title>
+      </Helmet>
       <Promo />
       <PagesLinks />
       <Promotion />

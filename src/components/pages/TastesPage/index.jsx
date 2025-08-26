@@ -17,11 +17,12 @@ const StyledH1 = styled.h1`
 `;
 
 const TastesPage = () => {
-  const dispatch = useDispatch();
-  const { tastes } = useSelector((state) => state.assemble);
-
   return (
     <>
+      <Helmet>
+        <meta name="Tastes" content="Tastes Page" />
+        <title>Tastes Page</title>
+      </Helmet>
       <nav className="pageNav">
         <Link to="/">Главная &gt; </Link>
         <Link to="/news">Собрать набор &gt;</Link>
@@ -30,11 +31,9 @@ const TastesPage = () => {
         </Link>
         <span className="pageNav__curr">Выбрать количество</span>
       </nav>
-
       <StyledH1 className="tastesPage__title fw-600 fz-18">
         Выберите вкусы
       </StyledH1>
-
       <PageLayout
         sectionClass="tastesPage"
         queryName={useGetTastesQuery}

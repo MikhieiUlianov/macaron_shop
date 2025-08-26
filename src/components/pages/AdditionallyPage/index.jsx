@@ -8,6 +8,8 @@ import {
 } from "@/components/Assemble/assembleSlice";
 import styled from "styled-components";
 
+import { Helmet } from "react-helmet";
+
 const AdditionallyPage = () => {
   const StyledH1 = styled.h1`
     margin-top: 17px;
@@ -19,6 +21,10 @@ const AdditionallyPage = () => {
 
   return (
     <>
+      <Helmet>
+        <meta name="Additionally" content="Additionally Page" />
+        <title>Additionally Page</title>
+      </Helmet>
       <nav className="pageNav">
         <Link to="/">Главная &gt; </Link>
         <Link to="/assemble-custom-set">Собрать набор &gt;</Link>

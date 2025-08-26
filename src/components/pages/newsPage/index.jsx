@@ -5,6 +5,7 @@ import "./newsPage.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import { Helmet } from "react-helmet";
 const NewsPage = () => {
   const { clearError, getData, process, setProcess } = useMacaronService();
   const [news, setNews] = useState([]);
@@ -61,33 +62,40 @@ const NewsPage = () => {
   };
 
   return (
-    <div className="newsPage">
-      <div className="container">
-        <nav className="pageNav">
-          <Link to={"/"}>Главная &gt; </Link>
-          <div className="pageNav__curr "> Новости</div>
-        </nav>
-        <h1 className="newsPage__title fz-18 fw-600">Новости</h1>
-        <ul className="newsPage__filters">
-          {filters.map((filter) => {
-            return (
-              <li
-                key={filter}
-                className={`newsPage__filters-filter fw-400 fz-12 ${
-                  activeFilters.includes(filter) ? "active" : ""
-                }`}
-                onClick={() => handleFilters(filter)}
-              >
-                {filter}
-              </li>
-            );
-          })}
-        </ul>
-        <div className="newsPage__wrapper">
-          {setContent(process, renderNews, filteredItems(news))}
+    <>
+      {" "}
+      <Helmet>
+        <meta name="News Page" content="News Page Page" />
+        <title>News Page Page</title>
+      </Helmet>
+      <div className="newsPage">
+        <div className="container">
+          <nav className="pageNav">
+            <Link to={"/"}>Главная &gt; </Link>
+            <div className="pageNav__curr "> Новости</div>
+          </nav>
+          <h1 className="newsPage__title fz-18 fw-600">Новости</h1>
+          <ul className="newsPage__filters">
+            {filters.map((filter) => {
+              return (
+                <li
+                  key={filter}
+                  className={`newsPage__filters-filter fw-400 fz-12 ${
+                    activeFilters.includes(filter) ? "active" : ""
+                  }`}
+                  onClick={() => handleFilters(filter)}
+                >
+                  {filter}
+                </li>
+              );
+            })}
+          </ul>
+          <div className="newsPage__wrapper">
+            {setContent(process, renderNews, filteredItems(news))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

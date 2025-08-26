@@ -1,7 +1,4 @@
 import "./pageLayout.scss";
-
-import { useGetAdditionallyQuery } from "@/api/apiSlice";
-import { useGetTastesQuery } from "@/api/apiSlice";
 import Section from "@/components/Section";
 import close from "/icons/close-small.svg";
 import QueryWrapper from "@/utils/QueryWrapper";

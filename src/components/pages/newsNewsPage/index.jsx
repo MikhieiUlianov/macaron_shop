@@ -3,6 +3,7 @@ import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
 import "./newsNewsPage.scss";
 
+import { Helmet } from "react-helmet";
 import ReusableThumbsSlider from "@/utils/ReusableThumbsSlider";
 const NewsNewsPage = () => {
   const { clearError, process, setProcess, getPageData } = useMacaronService();
@@ -69,19 +70,25 @@ const NewsNewsPage = () => {
   );
 
   return (
-    <section className="newsNewsPage">
-      <div className="container">
-        <nav className="pageNav">
-          <Link to="/">Главная &gt; </Link>
-          <Link to="/news">Новости &gt;</Link>
-          <span className="pageNav__curr">
-            {pageData?.title || "Загрузка..."}
-          </span>
-        </nav>
-        {setContent(process, renderNewsPage, pageData)}
-        <Form />
-      </div>
-    </section>
+    <>
+      <Helmet>
+        <meta name="News Page" content="News Page Page" />
+        <title>News Page Page</title>
+      </Helmet>
+      <section className="newsNewsPage">
+        <div className="container">
+          <nav className="pageNav">
+            <Link to="/">Главная &gt; </Link>
+            <Link to="/news">Новости &gt;</Link>
+            <span className="pageNav__curr">
+              {pageData?.title || "Загрузка..."}
+            </span>
+          </nav>
+          {setContent(process, renderNewsPage, pageData)}
+          <Form />
+        </div>
+      </section>
+    </>
   );
 };
 
