@@ -2,13 +2,15 @@ const MainPage = lazy(() => import("@/components/pages/MainPage"));
 const PopularSetsPage = lazy(() =>
   import("@/components/pages/PopularSetsPage")
 );
-const NewsPage = lazy(() => import("@/components/pages/NewsPage"));
-const GuaranteesPage = lazy(() => import("@/components/pages/GuaranteesPage"));
-const DeliveryPage = lazy(() => import("@/components/pages/DeliveryPage"));
-const NewsNewsPage = lazy(() => import("@/components/pages/NewsNewsPage"));
-const ContactsPage = lazy(() => import("@/components/pages/ContactsPage"));
-const Page404 = lazy(() => import("@/components/pages/Page404"));
-const Policy = lazy(() => import("@/components/pages/Policy"));
+const NewsPage = lazy(() => import("@/components/pages/NewsPage/page"));
+const GuaranteesPage = lazy(() =>
+  import("@/components/pages/GuaranteesPage/page")
+);
+const DeliveryPage = lazy(() => import("@/components/pages/DeliveryPage/page"));
+const NewsNewsPage = lazy(() => import("@/components/pages/NewsNewsPage/page"));
+const ContactsPage = lazy(() => import("@/components/pages/ContactsPage/page"));
+const Page404 = lazy(() => import("@/components/pages/Page404/page"));
+const Policy = lazy(() => import("@/components/pages/Policy/page"));
 const CatalogDessertsPage = lazy(() =>
   import("@/components/pages/CatalogDessertsPage")
 );

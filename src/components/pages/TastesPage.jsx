@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useGetTastesQuery } from "@/api/apiSlice";
-import PageLayout from "../PageLayout.jsx";
+import PageLayout from "./PageLayout.jsx/page.jsx";
 import {
   onAdd,
   onQuantityDecrease,
