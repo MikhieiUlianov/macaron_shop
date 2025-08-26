@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from "react-router-dom";
+import { Suspense } from "react";
 
 import "@/sass/libs/modern-normalize.min.css";
 import "@/sass/libs/grids-min.css";
