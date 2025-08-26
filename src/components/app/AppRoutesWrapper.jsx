@@ -2,7 +2,7 @@ const MainPage = lazy(() => import("@/components/pages/MainPage"));
 const PopularSetsPage = lazy(() =>
   import("@/components/pages/PopularSetsPage")
 );
-const NewsPage = lazy(() => import("@/components/pages/NewsPage/page"));
+const NewsPage = lazy(() => import("@/components/pages/NewsPageFolder/page"));
 const GuaranteesPage = lazy(() =>
   import("@/components/pages/GuaranteesPage/page")
 );
