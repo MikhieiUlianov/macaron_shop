@@ -59,7 +59,7 @@ const NewsNewsPage = () => {
               enablePagination={true}
               thumbsSwiper={thumbsSwiper}
               setThumbsSwiper={setThumbsSwiper}
-              imageKeys={{ img: "thumbImg", alt: "thumbAlt" }} // используем ключи из данных
+              imageKeys={{ img: "thumbImg", alt: "thumbAlt" }}
             />
           </div>
         </div>

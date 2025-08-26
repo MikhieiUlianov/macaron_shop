@@ -8,9 +8,9 @@
   }
 
   &__card {
-    display: flex; // <— делаем флекс
-    flex-direction: column; // <— по вертикали
-    justify-content: space-between; // распределяем элементы
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
     width: 140px;
     min-height: 238px;
@@ -39,7 +39,7 @@
     }
 
     &-price {
-      margin-top: auto; // <— ключевой момент: отправляет цену вниз
+      margin-top: auto;
       padding: 5px 0;
       font-size: 14px;
       font-weight: 600;

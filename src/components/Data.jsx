@@ -1,4 +1,3 @@
-//pagesLinks
 import corporateGift from "/icons/pagesLinks/corporate-gift.svg";
 import design from "/icons/pagesLinks/custom-design.svg";
 import set from "/icons/pagesLinks/custom-set.svg";
@@ -6,22 +5,19 @@ import readyMadeSets from "/icons/pagesLinks/ready-made-sets.svg";
 import weeding from "/icons/pagesLinks/weeding.svg";
 import wholesale from "/icons/pagesLinks/wholesale.svg";
 
-// promotionSlides
 import promoChocolate from "/img/promotion/chocolate-cake.jpeg";
 import promoCaramel from "/img/promotion/caramel-candy.jpeg";
 import promoCandy from "/img/promotion/delicious-candies.jpeg";
 import promoFreeDelivery from "/img/promotion/free-delivery.jpeg";
 
-// holidays
 import holYellow from "/img/holidays/macaron-yellow-hol.png";
 import holPink from "/img/holidays/macaron-pink-hol.png";
 import holBlue from "/img/holidays/macaron-blue-hol.png";
 
-// news
 import news1 from "/img/news/valentine's.jpeg";
 import news2 from "/img/news/event.jpeg";
 import news3 from "/img/news/macarons.jpeg";
-// newsNewsPage.thumbs
+
 import someThumb from "/img/news/macarons.jpeg";
 //popularSets
 import set16 from "/img/popularSets/set-16.jpeg";
@@ -29,52 +25,38 @@ import set9 from "/img/popularSets/set-9.jpeg";
 import heart from "/img/popularSets/heart.jpeg";
 import roundSet from "/img/popularSets/roundSet.jpeg";
 
-// steps
 import stepIngredients from "/img/steps/ingridients.jpeg";
 import stepPackage from "/img/steps/package.jpeg";
 import stepGetting from "/img/steps/getting-order.jpeg";
 import stepDelivery from "/img/steps/delivery.jpeg";
 
-// guarantees
 import guarantAlmond from "/img/guarantees/almond-flour.jpeg";
 import guarantColorings from "/img/guarantees/colorings.jpeg";
 import guarantFruits from "/img/guarantees/frukts.jpeg";
 
-//catalogDesserts
 import waffle from "/img/catalogDesserts/waffle.png";
 import eclairs from "/img/catalogDesserts/eclairs.png";
 import profitroles from "/img/catalogDesserts/profitroles.png";
-
-//try
 
 import macaronEclair from "/img/try/macaron-eclair.jpeg";
 import macaronEclairS from "/img/try/macaron-eclair-s.jpeg";
 import macaronEclairM from "/img/try/macaron-eclair-m.jpeg";
 import macaronEclairL from "/img/try/macaron-eclair-l.jpeg";
 
-//somePresents
-
 import macaronsSeal9 from "/img/corporate/macarons-seal-9.png";
 import macaronsSeal from "/img/corporate/macarons-seal.png";
 import set70 from "/img/corporate/set-70.png";
 import round40 from "/img/corporate/round-set-40.png";
 
-//recommendation
-
 import edge from "/img/edge.png";
 
-//weedingSets
 import weddingSet from "/img/wedding-cake.png";
-
-//assemble
 
 import macaronSet9 from "/img/macaronSets/macaronSet-9.png";
 import macaronSet12 from "/img/macaronSets/macaronSet-12.png";
 import macaronSet24 from "/img/macaronSets/macaronSet-24.png";
 import macaronSet48 from "/img/macaronSets/macaronSet-48.png";
 import macaronSet40 from "/img/macaronSets/macaronSet-40.png";
-
-//tastes
 
 import chocBanan from "/img/tastes/choc-banan.png";
 import seaBuckthorn from "/img/tastes/seaBuckthorn.png";
@@ -83,11 +65,8 @@ import blueCheese from "/img/tastes/blueCheese.png";
 import parmesan from "/img/tastes/parmesan.png";
 import pesto from "/img/tastes/pesto.png";
 
-//additionally
-
 import plug from "/img/plug.jpeg";
 
-// —––––––––– ДАННЫЕ —–––––––––
 const siteData = {
   social: [
     { href: "#", className: "icon-telegram", id: "16e8" },
@@ -140,6 +119,7 @@ const siteData = {
       text: "Готовые наборы со скидкой. <br/>Вы можете подобрать набор на подходящий случай.",
       colorClass: "orange",
       id: "ff6f",
+      link: "/catalog/popular-sets",
     },
     {
       img: set,
@@ -148,6 +128,7 @@ const siteData = {
       text: "Выбрать количество макарун, и выбрать вкусы",
       colorClass: "pink",
       id: "b761",
+      link: "/assemble-custom-set/select-amount",
     },
     {
       img: design,
@@ -156,6 +137,7 @@ const siteData = {
       text: "Собрать набор макарон с уникальным дизайном. ",
       colorClass: "green",
       id: "301a",
+      link: "/contacts",
     },
     {
       img: weeding,
@@ -164,6 +146,7 @@ const siteData = {
       text: "Нежные пирожные макаронс с разными вкусами для украшения вашего свадебного торжества",
       colorClass: "salmon",
       id: "efba",
+      link: "/wedding",
     },
     {
       img: corporateGift,
@@ -172,6 +155,7 @@ const siteData = {
       text: "От 85 руб за шт. С уникальным дизайном. <br/>Приятный комплимент для коллег и партнеров",
       colorClass: "blue",
       id: "f4d5",
+      link: "/corporate",
     },
     {
       img: wholesale,
@@ -180,6 +164,7 @@ const siteData = {
       text: "Предложение для кофеен, кафе, отелей и т.д. Посмотрите условия сотрудничества и отзывы.",
       colorClass: "purple",
       id: "669c",
+      link: "/delivery",
     },
   ],
 
@@ -422,7 +407,6 @@ const siteData = {
         { img: heart, alt: "heart" },
         { img: heart, alt: "heart" },
       ],
-      alt: "heart",
       title: "Сердце",
       text: "40 макаронс в круглой коробке с персональной надписью",
       price: "2800",

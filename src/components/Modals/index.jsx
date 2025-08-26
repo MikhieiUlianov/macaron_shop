@@ -14,12 +14,12 @@ const Modal = ({ active, children, onClose }) => {
 
   const handleOverlayClick = () => {
     if (onClose) {
-      onClose(); // trigger closing logic (e.g., dispatch Redux action)
+      onClose();
     }
   };
 
   const handleContentClick = (e) => {
-    e.stopPropagation(); // prevent closing when clicking inside modal
+    e.stopPropagation();
   };
 
   return (

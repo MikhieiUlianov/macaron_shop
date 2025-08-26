@@ -112,25 +112,43 @@ const Header = () => {
 
       <div className="header__subBlock">
         <div className="container">
-          <div className="header__subBlock-block fw-400 fz-14">
+          <Link
+            to="/catalog/desserts"
+            className="header__subBlock-block fw-400 fz-14"
+          >
             СЛАДКИЕ ДНИ
             <div className="header__subBlock-block-circle">
               <img src={sale} alt="sale" />
             </div>
-          </div>
-          <div className="header__subBlock-block fw-400 fz-14">
+          </Link>
+          <Link
+            to="/guarantees"
+            className="header__subBlock-block fw-400 fz-14"
+          >
             ПОДАРОЧНЫЕ НАБОРЫ <span className="icon-down-open"></span>
-          </div>
-          <div className="header__subBlock-block fw-400 fz-14">
+          </Link>
+          <Link
+            to="/catalog/desserts"
+            className="header__subBlock-block fw-400 fz-14"
+          >
             СОБРАТЬ НАБОР
-          </div>
-          <img src={logo} alt="logo" className="header__subBlock-block-logo" />
-          <div className="header__subBlock-block fw-400 fz-14">
+          </Link>
+          <Link to={"/"}>
+            <img
+              src={logo}
+              alt="logo"
+              className="header__subBlock-block-logo"
+            />
+          </Link>
+          <Link
+            to={"/assemble-custom-set/select-amount"}
+            className="header__subBlock-block fw-400 fz-14"
+          >
             СОЗДАТЬ ДИЗАЙН
-          </div>
-          <div className="header__subBlock-block">
+          </Link>
+          <Link to="/suggestions" className="header__subBlock-block">
             КОМПАНИЯМ <span className="icon-down-open"></span>
-          </div>
+          </Link>
           <div
             className={`header__subBlock-block fw-400 fz-14 ${
               activeCatalogAccordion ? "active" : ""

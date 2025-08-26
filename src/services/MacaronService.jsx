@@ -24,16 +24,6 @@ const useMacaronService = () => {
     [request]
   );
 
-  /*   const getCatalog = useCallback(
-    async (endpoint, start = 0, offset = 6) => {
-      const res = await request(
-        `http://localhost:5000/${endpoint}?_start=${start}&_limit=${offset}`
-      );
-      return res;
-    },
-    [request]
-  ); */
-
   const getPageData = (id) => {
     return new Promise((resolve) => {
       const item = siteData.newsNewsPage.find((page) => page.id === id);

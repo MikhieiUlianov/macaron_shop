@@ -38,7 +38,12 @@ const CartUpdated = () => {
         >
           Оформить заказ
         </Link>
-        <button className="cartUpdated__button cartUpdated__button--secondary">
+        <button
+          onClick={() =>
+            dispatch(toggleModal({ modal: "cartUpdated", value: false }))
+          }
+          className="cartUpdated__button cartUpdated__button--secondary"
+        >
           Продолжить покупки
         </button>
       </div>

@@ -1,11 +1,11 @@
 @use "./ui/buttons.scss";
 @use "./ui/text.scss";
+@use "./mixins.scss";
+@use "./variables.scss";
+@use "./libs/fontello.css";
 
-@import "@/assets/fonts.css";
-@import "@/assets/fontello.css";
-@import "./mixins.scss";
-@import "./variables.scss";
-
+@import "./libs/fontello.css";
+@import "./libs/fonts.css";
 h1,
 h2,
 h3,

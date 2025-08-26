@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import useMacaronService from "@/services/MacaronService";
-import setContent from "@/utils/setContent"; // You might not even need this with this approach
+import setContent from "@/utils/setContent";
 import "./promotion.scss";
 
 const Promotion = () => {
@@ -20,7 +20,6 @@ const Promotion = () => {
     });
   }, []);
 
-  // Render slides as <SwiperSlide> components — *very important*
   const renderSlides = (slides) =>
     slides.map(({ label, text, img, alt }, index) => (
       <SwiperSlide

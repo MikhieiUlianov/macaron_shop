@@ -30,8 +30,8 @@
   }
 
   &__item {
-    display: flex; // 💡 ГЛАВНОЕ
-    flex-direction: column; // 💡 чтобы футер был снизу
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     padding: 8px 8px 0 8px;
     width: 140px;
@@ -58,7 +58,7 @@
     }
 
     &-footer {
-      margin-top: auto; // 💡 сдвигает футер вниз
+      margin-top: auto;
       border-top: 1px solid rgb(237, 237, 240);
       display: grid;
       align-items: center;

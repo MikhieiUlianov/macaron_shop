@@ -20,10 +20,6 @@ const TastesPage = () => {
   const dispatch = useDispatch();
   const { tastes } = useSelector((state) => state.assemble);
 
-  /*   useEffect(() => {
-    dispatch(getTotalSelected());
-  }, [tastes, dispatch]); */
-
   return (
     <>
       <nav className="pageNav">

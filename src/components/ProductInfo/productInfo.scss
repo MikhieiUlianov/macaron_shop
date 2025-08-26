@@ -107,7 +107,7 @@
       }
 
       &[data-state="open"] img {
-        transform: rotate(0deg); // ✅ Rotate when open
+        transform: rotate(0deg);
       }
     }
     &-content {
@@ -115,7 +115,6 @@
       flex-direction: column;
       gap: 10px;
 
-      /*       border-top: 1px solid rgb(237, 237, 240); */
       &-item {
         display: flex;
         justify-content: space-between;

@@ -51,7 +51,6 @@ const ProductInfo = () => {
     saleName,
     quantity,
   }) => {
-    // Находим аккордеон с "Вкусы:"
     const tastesAccordion = accordions.find((a) => a.title === "Вкусы:");
 
     return (
@@ -63,7 +62,6 @@ const ProductInfo = () => {
         </nav>
 
         <div className="productInfo__wrapper">
-          {/* Слайдеры слева */}
           <div className="productInfo__sliderBlock">
             <ReusableThumbsSlider
               thumbs={thumbs}
@@ -74,14 +72,12 @@ const ProductInfo = () => {
             />
           </div>
 
-          {/* Контент справа */}
           <div className="productInfo__content">
             <div className="productInfo__promo">
               <h1 className="productInfo__title fw-600 fz-18">{title}</h1>
               <div className="productInfo__text fw-400 fz-14">{text}</div>
             </div>
 
-            {/* Вкусы - отдельный блок (виден только на десктопе) */}
             {tastesAccordion && (
               <div className="productInfo__tastes desktopOnly">
                 <ul className="productInfo__tastes-tastes">
@@ -134,7 +130,6 @@ const ProductInfo = () => {
               </button>
             </div>
 
-            {/* Аккордеон с остальными блоками + "Вкусы" (виден только на мобильных) */}
             <Accordion.Root
               className="productInfo__accordion mobileOnly"
               type="single"
@@ -166,7 +161,6 @@ const ProductInfo = () => {
               ))}
             </Accordion.Root>
 
-            {/* Информация о доставке и подарках */}
             <div className="productInfo__info">
               <div className="productInfo__info-block">
                 <img

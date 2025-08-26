@@ -17,9 +17,9 @@ const Assemble = () => {
           key={id}
           className="assemble__item"
           onClick={(e) => {
-            e.preventDefault(); // остановить переход
+            e.preventDefault();
             dispatch(onAmountSelected({ price, title }));
-            navigate("/assemble-custom-set/select-amount/tastes"); //
+            navigate("/assemble-custom-set/select-amount/tastes");
           }}
         >
           <img src={img} alt={alt} className="assemble__item-img" />

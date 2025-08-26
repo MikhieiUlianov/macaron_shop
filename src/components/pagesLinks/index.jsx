@@ -17,10 +17,10 @@ const PagesLinks = () => {
   }, []);
 
   const renderPagesLinks = (links) => {
-    return links.map(({ img, alt, title, text, colorClass }, index) => {
+    return links.map(({ link, img, alt, title, text, colorClass }, index) => {
       return (
         <li className={`pagesLinks__block ${colorClass}`} key={index}>
-          <a href="#">
+          <Link to={link}>
             <div className="pagesLinks__block-circle"></div>
             <img src={img} alt={alt} className="pagesLinks__block-img" />
             <div className="pagesLinks__block-subBlock">
@@ -41,7 +41,7 @@ const PagesLinks = () => {
                 </span>
               ))}
             </div>
-          </a>
+          </Link>
         </li>
       );
     });

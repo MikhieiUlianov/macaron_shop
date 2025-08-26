@@ -51,13 +51,13 @@ const CatalogDesserts = () => {
             </div>
             <div className="catalogDesserts__promo-btns">
               <Link
-                to={"/ready-sets"}
+                to={"/catalog/popular-sets"}
                 className="catalogDesserts__promo-btn fz-12 fw-600"
               >
                 Готовые наборы
               </Link>
               <Link
-                to={"/create-set"}
+                to={"/assemble-custom-set/select-amount"}
                 className="catalogDesserts__promo-btn fz-12 fw-600"
               >
                 Собрать свой набор

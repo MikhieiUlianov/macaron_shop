@@ -21,7 +21,7 @@ const CardLayout = ({ items }) => {
       <div className="cardLayout__block-footer">
         <div className="cardLayout__block-price fz-14 fw-600">{price} руб.</div>
         <Link
-          to={`/popularSets/${id}`}
+          to={`/popularSets/c9e3a713-75d4-42bf-982a-3e0b4c0a321f`}
           className="cardLayout__block-footer-subBlock"
         >
           <img src={shop} alt="shop" className="cardLayout__block-bag" />

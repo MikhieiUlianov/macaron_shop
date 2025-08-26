@@ -2,8 +2,6 @@ import CardLayout from "@/utils/CardLayout/index.jsx";
 import { useGetWeddingSetsQuery } from "@/api/apiSlice.jsx";
 import QueryWrapper from "@/utils/QueryWrapper.jsx";
 import Section from "../Section.jsx";
-
-import "./WeddingSets.jsx";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`

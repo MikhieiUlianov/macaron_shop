@@ -29,7 +29,6 @@ const FormDelivery = () => {
 
   const [postData, { isLoading, isError }] = usePostDataMutation();
 
-  // Sync activeMethod with react-hook-form
   useEffect(() => {
     setValue("deliveryMethod", activeMethod);
     setValue("methodToPay", activeCheckbox);
@@ -46,6 +45,7 @@ const FormDelivery = () => {
         dispatch(updateCartOrderData(formData));
         setShowSuccess(true);
         dispatch(resetCart());
+        console.log(formData);
         setTimeout(() => {
           setShowSuccess(false);
         }, 3000);
@@ -79,7 +79,6 @@ const FormDelivery = () => {
         className="formDelivery__form"
         onSubmit={handleSubmit(onSubmit)}
       >
-        {/* Hidden input to submit delivery method */}
         <input type="hidden" {...register("deliveryMethod")} />
         <input type="hidden" {...register("methodToPay")} />
 

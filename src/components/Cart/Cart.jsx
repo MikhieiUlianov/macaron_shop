@@ -61,7 +61,6 @@ const Cart = () => {
       )
     );
 
-  // The additional grocery item to add to cart on click
   const additionalItem = {
     id: "saff",
     img: roundSet,
@@ -74,7 +73,6 @@ const Cart = () => {
     quantity: 1,
   };
 
-  // Render the additional item with buttons that dispatch addProduct or decreaseQuantity in cart
   const renderAdditionalItem = (item) => {
     const cartItem = cart.find((i) => i.id === item.id);
 

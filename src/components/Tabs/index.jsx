@@ -12,12 +12,10 @@ const Tabs = () => {
     isError,
   } = useGetProductInfoQuery(productId);
 
-  const [activeTab, setActiveTab] = useState(null); // выберем активный после загрузки
+  const [activeTab, setActiveTab] = useState(null);
 
-  // Пришли данные — установим активный таб по умолчанию
   const tabs = data?.tabs || [];
 
-  // Устанавливаем первый таб активным после загрузки
   useEffect(() => {
     if (!activeTab && tabs.length > 0) {
       setActiveTab(tabs[0].title);
@@ -32,7 +30,6 @@ const Tabs = () => {
       data={data}
     >
       <Section sectionClass="tabs">
-        {/* Tab Buttons */}
         <div className="tabs__buttons">
           {tabs.map(({ title }) => (
             <button
@@ -47,7 +44,6 @@ const Tabs = () => {
           ))}
         </div>
 
-        {/* Tab Content */}
         <div className="tabs__content">
           {tabs.map(
             ({ title, text }, idx) =>

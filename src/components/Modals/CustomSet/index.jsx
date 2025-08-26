@@ -15,7 +15,7 @@ const CustomSet = () => {
   };
 
   const handleClick = () => {
-    const id = Date.now(); // уникальный ID
+    const id = Date.now();
     const product = {
       id,
       title: orderTitle,
@@ -41,10 +41,7 @@ const CustomSet = () => {
       <div className="customSet__wrapper">
         <h3 className="customSet__subtitle fz-14 fw-600">
           {orderTitle}
-          <span className="fz-14 fw-600">
-            {""}
-            {price} руб.
-          </span>
+          <span className="fz-14 fw-600">{price} руб.</span>
         </h3>
         <ul className="customSet__list">
           {tastes.map(({ title, quantity }, index) => {

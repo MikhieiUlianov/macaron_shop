@@ -9,7 +9,7 @@ import "./formIdeas.scss";
 
 const FormIdeas = () => {
   const [postData, { isLoading, isError }] = usePostDataMutation();
-  const [success, setSuccess] = useState(null); // null = ещё не отправляли
+  const [success, setSuccess] = useState(null);
 
   const {
     register,
