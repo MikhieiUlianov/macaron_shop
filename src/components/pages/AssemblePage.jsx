@@ -1,4 +1,4 @@
-import Assemble from "../Assemble/Assemble";
+import Assemble from "../Assemble/assemble";
 
 const AssemblePage = () => {
   return (

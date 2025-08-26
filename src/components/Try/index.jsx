@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import QueryWrapper from "@/utils/QueryWrapper";
 import Section from "../Section";
 import { useGetTryQuery } from "@/api/apiSlice";
-import CardLayout from "../../utils/CardLayout/CardLayout";
+import CardLayout from "../../utils/CardLayout";
 
 import shop from "/icons/shop.svg";
 import "./try.scss";

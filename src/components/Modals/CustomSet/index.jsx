@@ -1,4 +1,4 @@
-import Modal from "../Modals";
+import Modal from "..";
 import "./customSet.scss";
 import { toggleModal } from "../modalsSlice";
 import { updateCart } from "@/components/Cart/cartSlice";

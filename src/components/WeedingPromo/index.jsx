@@ -1,4 +1,4 @@
-import PromoWithButtons from "@/utils/PromoWithButtons/PromoWithButtons";
+import PromoWithButtons from "@/utils/PromoWithButtons";
 
 import weddingCake from "/img/wedding-cake.png";
 

@@ -1,4 +1,4 @@
-import PopularSets from "../PopularSets/PopularSets";
+import PopularSets from "../PopularSets";
 
 const PopularSetsPage = () => {
   return (

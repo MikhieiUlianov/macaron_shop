@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 import { useGetFooterQuery } from "@/api/apiSlice";
-import Social from "../Social/Social";
+import Social from "../Social";
 import QueryWrapper from "@/utils/QueryWrapper";
 
 import "./footer.scss";

@@ -1,23 +1,22 @@
-import Form from "@/components/form/Form";
+import Form from "@/components/Form";
 import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
 import "./newsNewsPage.scss";
 
 import ReusableThumbsSlider from "@/utils/ReusableThumbsSlider";
 const NewsNewsPage = () => {
-  const { newsPageId } = useParams();
   const { clearError, process, setProcess, getPageData } = useMacaronService();
   const [pageData, setPageData] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
     clearError();
-    getPageData(newsPageId).then((data) => {
+    getPageData("spring-holiday-2023").then((data) => {
       setPageData(data);
       setProcess("confirmed");
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newsPageId]);
+  }, []);
 
   const renderNewsPage = useCallback(
     (item) => {

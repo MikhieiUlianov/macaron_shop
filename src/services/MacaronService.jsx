@@ -10,22 +10,21 @@ const useMacaronService = () => {
     [request]
   );
 
-  /*   const getData = useCallback(
-    async (url) => {
-      const res = await request(`http://localhost:5000/${url}`);
-      return res;
-    },
-    [request]
-  );
- */
-
   const getData = (endpoint) => {
     return new Promise((resolve) => {
-      setTimeout(() => resolve(siteData[endpoint]), 500); // simulate delay
+      setTimeout(() => resolve(siteData[endpoint]), 500);
     });
   };
 
   const getCatalog = useCallback(
+    async (endpoint, start = 0, offset = 6) => {
+      const res = siteData[endpoint].slice(start, offset);
+      return res;
+    },
+    [request]
+  );
+
+  /*   const getCatalog = useCallback(
     async (endpoint, start = 0, offset = 6) => {
       const res = await request(
         `http://localhost:5000/${endpoint}?_start=${start}&_limit=${offset}`
@@ -33,15 +32,8 @@ const useMacaronService = () => {
       return res;
     },
     [request]
-  );
-  /*  const getPageData = useCallback(
-    async (id, folder) => {
-      const res = await request(`http://localhost:5000/${folder}`);
-      const item = res.find((i) => i.id === id);
-      return item;
-    },
-    [request]
   ); */
+
   const getPageData = (id) => {
     return new Promise((resolve) => {
       const item = siteData.newsNewsPage.find((page) => page.id === id);

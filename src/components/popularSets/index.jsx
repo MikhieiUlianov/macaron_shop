@@ -1,7 +1,7 @@
 import { useGetPopularSetsQuery } from "@/api/apiSlice";
 import { Link } from "react-router-dom";
 import QueryWrapper from "@/utils/QueryWrapper";
-import CardLayout from "../../utils/CardLayout/CardLayout";
+import CardLayout from "../../utils/CardLayout";
 
 import "./popularSets.scss";
 

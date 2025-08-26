@@ -1,6 +1,6 @@
-import ProductInfo from "@/components/ProductInfo/ProductInfo";
-import Tabs from "@/components/Tabs/Tabs";
-import Try from "../Try/Try";
+import ProductInfo from "@/components/ProductInfo";
+import Tabs from "@/components/Tabs";
+import Try from "../Try";
 
 const ProductPage = () => {
   return (

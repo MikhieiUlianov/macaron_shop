@@ -1,6 +1,6 @@
-import Spinner from "@/components/Spinner/Spinner";
-import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
-import NotAvailibleMessage from "@/components/NotAvailibleMessage/NotAvailibleMessage";
+import Spinner from "@/components/Spinner";
+import ErrorMessage from "@/components/ErrorMessage";
+import NotAvailibleMessage from "@/components/NotAvailibleMessage";
 
 const setContent = (process, renderFunction, data, newDataLoading = false) => {
   switch (process) {
@@ -11,11 +11,9 @@ const setContent = (process, renderFunction, data, newDataLoading = false) => {
     case "error":
       return <ErrorMessage />;
     case "confirmed":
-      // Проверяем, массив ли data
       if (Array.isArray(data)) {
         return data.length > 0 ? renderFunction(data) : <NotAvailibleMessage />;
       } else {
-        // Если data — объект, проверяем на существование
         return data ? renderFunction(data) : <NotAvailibleMessage />;
       }
     default:

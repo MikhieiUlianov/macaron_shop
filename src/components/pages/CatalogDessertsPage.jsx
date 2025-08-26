@@ -1,5 +1,5 @@
-import CatalogDesserts from "../CatalogDesserts/CatalogDesserts";
-import Try from "../Try/Try";
+import CatalogDesserts from "../CatalogDesserts";
+import Try from "../Try";
 
 const CatalogDessertsPage = () => {
   return (

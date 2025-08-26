@@ -5,14 +5,14 @@ import "@/sass/libs/grids-min.css";
 import "@/sass/libs/grids-responsive-min.css";
 import "@/sass/style.scss";
 
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import Menu from "../Menu/Menu";
+import Header from "../Header";
+import Footer from "../Footer";
+import Menu from "../Menu";
 
-import Spinner from "../Spinner/Spinner";
+import Spinner from "../Spinner";
 import AppRoutesWrapper from "./AppRoutesWrapper";
-import CartUpdated from "../Modals/CartUpdated/CartUpdated";
-import CustomSet from "../Modals/CustomSet/CustomSet";
+import CartUpdated from "../Modals/CartUpdated";
+import CustomSet from "../Modals/CustomSet";
 
 function App() {
   return (

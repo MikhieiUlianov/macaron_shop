@@ -1,6 +1,6 @@
 const FormField = ({
-  as = "input", // input | textarea | select
-  type = "text", // only for input
+  as = "input",
+  type = "text",
   label,
   id,
   placeholder,
@@ -8,7 +8,7 @@ const FormField = ({
   register,
   errorConfig,
   errors,
-  options = [], // only for select
+  options = [],
   extraInputClass,
   extraLabelClass,
 }) => {

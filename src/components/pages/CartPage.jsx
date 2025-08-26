@@ -1,5 +1,5 @@
-import Cart from "../Cart/Cart";
-import Try from "../Try/Try";
+import Cart from "../Cart/cart";
+import Try from "../Try";
 
 const CartPage = () => {
   return (

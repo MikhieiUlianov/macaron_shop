@@ -1,4 +1,4 @@
-import CardLayout from "@/utils/CardLayout/CardLayout.jsx";
+import CardLayout from "@/utils/CardLayout/index.jsx";
 import { useGetWeddingSetsQuery } from "@/api/apiSlice.jsx";
 import QueryWrapper from "@/utils/QueryWrapper.jsx";
 import Section from "../Section.jsx";

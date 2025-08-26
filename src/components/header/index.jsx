@@ -6,7 +6,7 @@ import logo from "/icons/logo.svg";
 import { Link } from "react-router-dom";
 
 import "./header.scss";
-import Social from "../Social/Social";
+import Social from "../Social";
 import {
   changeActiveCatalog,
   changeActiveTown,
