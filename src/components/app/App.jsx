@@ -6,14 +6,14 @@ import "@/sass/libs/grids-min.css";
 import "@/sass/libs/grids-responsive-min.css";
 import "@/sass/style.scss";
 
-import Header from "../Header";
-import Footer from "../Footer";
-import Menu from "../Menu";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Menu from "@/components/Menu";
 
-import Spinner from "../Spinner";
-import AppRoutesWrapper from "./AppRoutesWrapper";
-import CartUpdated from "../Modals/CartUpdated";
-import CustomSet from "../Modals/CustomSet";
+import Spinner from "@/components/Spinner";
+import AppRoutesWrapper from "@/components/app/AppRoutesWrapper";
+import CartUpdated from "@/components/Modals/CartUpdated";
+import CustomSet from "@/components/Modals/CustomSet";
 
 function App() {
   return (
