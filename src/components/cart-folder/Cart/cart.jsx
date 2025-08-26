@@ -5,11 +5,11 @@ import {
   addProduct,
 } from "./cartSlice";
 
-import Section from "../Section";
+import Section from "@/components/Section";
 import roundSet from "/img/popularSets/roundSet.jpeg";
 import "./cart.scss";
 import CartCounter from "../CartCounter";
-import FormDelivery from "../FormDelivery";
+import FormDelivery from "@/components/form-folder/FormDelivery";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state.cart);

@@ -1,4 +1,4 @@
-import Cart from "../Cart/cart";
+import Cart from "../cart-folder/Cart/cart";
 import Try from "../Try";
 
 import { Helmet } from "react-helmet";

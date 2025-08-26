@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Section from "../Section";
+import Section from "@/components/Section";
 import { useForm } from "react-hook-form";
 
 import { usePostDataMutation } from "@/api/apiSlice";
-import { updateCartOrderData, resetCart } from "../Cart/cartSlice";
+import {
+  updateCartOrderData,
+  resetCart,
+} from "../../cart-folder/Cart/cartSlice";
 
 import "./formDelivery.scss";
 import "../Form/form.scss";

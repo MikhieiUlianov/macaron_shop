@@ -1,4 +1,4 @@
-import Form from "../Form";
+import Form from "../form-folder/Form";
 import OurSuggestions from "../OurSuggestions";
 import Recommendation from "../Recommendation";
 import Wholesale from "../Wholesale";

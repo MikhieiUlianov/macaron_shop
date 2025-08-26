@@ -1,7 +1,7 @@
 import Modal from "..";
 import "./customSet.scss";
 import { toggleModal } from "../modalsSlice";
-import { updateCart } from "@/components/Cart/cartSlice";
+import { updateCart } from "@/components/cart-folder/Cart/cartSlice";
 const CustomSet = () => {
   const dispatch = useDispatch();
 

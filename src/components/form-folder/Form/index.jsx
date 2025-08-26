@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./form.scss";
 import useMacaronService from "@/services/MacaronService";
-import Section from "../Section";
+import Section from "@/components/Section";
 import FormField from "@/utils/FormField";
 
 const Form = () => {

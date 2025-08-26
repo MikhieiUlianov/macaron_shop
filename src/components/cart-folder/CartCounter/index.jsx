@@ -1,5 +1,6 @@
 import { useGetPromosQuery } from "@/api/apiSlice";
-import Section from "../Section";
+
+import Section from "@/components/Section";
 import "./cartCounter.scss";
 import { updateTotalSale } from "../Cart/cartSlice";
 const CartCounter = () => {

@@ -1,5 +1,5 @@
 import Answers from "../Answers/Answers";
-import FormIdeas from "../FormIdeas";
+import FormIdeas from "../form-folder/FormIdeas";
 import WeddingPromo from "../WeedingPromo";
 import WeddingSets from "../WeddingSets";
 import { Helmet } from "react-helmet";

@@ -5,7 +5,7 @@ import QueryWrapper from "@/utils/QueryWrapper";
 import Section from "../Section";
 import ReusableThumbsSlider from "@/utils/ReusableThumbsSlider";
 import { toggleModal } from "../Modals/modalsSlice";
-import { updateCart } from "@/components/Cart/cartSlice";
+import { updateCart } from "../cart-folder/Cart/cartSlice";
 
 import shop from "/icons/shop.svg";
 import arrow from "/icons/accordion-arrow.svg";

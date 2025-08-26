@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import FormField from "@/utils/FormField";
-import Section from "../Section";
+import Section from "@/components/Section";
 import { usePostDataMutation } from "@/api/apiSlice";
 
 import envelope from "/img/envelope.png";

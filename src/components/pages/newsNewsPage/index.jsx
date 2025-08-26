@@ -1,4 +1,4 @@
-import Form from "@/components/Form";
+import Form from "@/components/form-folder/Form";
 import useMacaronService from "@/services/MacaronService";
 import setContent from "@/utils/setContent";
 import "./newsNewsPage.scss";

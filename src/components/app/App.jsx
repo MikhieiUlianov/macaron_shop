@@ -6,9 +6,9 @@ import "@/sass/libs/grids-min.css";
 import "@/sass/libs/grids-responsive-min.css";
 import "@/sass/style.scss";
 
-import Header from "@/components/Header/index.jsx";
-import Footer from "@/components/Footer";
-import Menu from "@/components/Menu";
+import Header from "../navigation/Header";
+import Footer from "@/components/navigation/Footer";
+import Menu from "@/components/navigation/Menu";
 
 import Spinner from "@/components/Spinner";
 import AppRoutesWrapper from "@/components/app/AppRoutesWrapper";
