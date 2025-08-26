@@ -1,7 +1,7 @@
 import Answers from "../Answers/Answers";
-import FormIdeas from "../form-folder/FormIdeas";
-import WeddingPromo from "../WeedingPromo";
-import WeddingSets from "../WeddingSets";
+import FormIdeas from "../form-folder/FormIdeas/page";
+import WeddingPromo from "../WeedingPromo/page";
+import WeddingSets from "../WeddingSets/page";
 import { Helmet } from "react-helmet";
 
 const WeedingPage = () => {

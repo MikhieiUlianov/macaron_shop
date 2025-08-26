@@ -7,6 +7,7 @@ import {
   getTotalSelected,
   onRemoveItem,
 } from "@/components/Assemble/assembleSlice";
+import { Helmet } from "react-helmet";
 
 const StyledH1 = styled.h1`
   margin-top: 17px;
@@ -42,6 +43,7 @@ const TastesPage = () => {
         onDecFunc={onQuantityDecrease}
         getTotalSelected={getTotalSelected}
         endpoint={"tastes"}
+        additionallyPage
       />
     </>
   );

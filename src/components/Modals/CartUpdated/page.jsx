@@ -1,4 +1,4 @@
-import Modal from "..";
+import Modal from "../page";
 import { toggleModal } from "../modalsSlice";
 
 import "./cartUpdated.scss";

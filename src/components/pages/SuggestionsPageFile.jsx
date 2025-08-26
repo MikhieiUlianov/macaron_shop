@@ -1,7 +1,7 @@
-import Form from "../form-folder/Form";
-import OurSuggestions from "../OurSuggestions";
-import Recommendation from "../Recommendation";
-import Wholesale from "../Wholesale";
+import Form from "../form-folder/Form/page";
+import OurSuggestions from "../OurSuggestions/page";
+import Recommendation from "../Recommendation/page";
+import Wholesale from "../Wholesale/page";
 import { Helmet } from "react-helmet";
 
 const SuggestionsPage = () => {

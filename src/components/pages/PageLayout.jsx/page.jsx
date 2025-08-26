@@ -12,6 +12,7 @@ const PageLayout = ({
   onDecFunc,
   getTotalSelected,
   endpoint,
+  additionallyPage,
 }) => {
   const { data = [], isLoading, isError, isFetching } = queryName();
   const dispatch = useDispatch();
@@ -122,9 +123,15 @@ const PageLayout = ({
           </QueryWrapper>
         </div>
         <div className="pageLayout__counter">
-          <h2 className="pageLayout__counter-title fz-18 fw-600">
-            {totalSelected} из {amount} шт <span> {price} руб.</span>
-          </h2>
+          {additionallyPage ? (
+            <h2 className="pageLayout__counter-title fz-18 fw-600">
+              {totalSelected} из {amount} шт <span> {price} руб.</span>
+            </h2>
+          ) : (
+            <h2 className="pageLayout__counter-title fz-18 fw-600">
+              {totalSelected}
+            </h2>
+          )}
           <ul className="pageLayout__counter-list">
             {items.map(({ title, quantity, id, price = 0 }) => {
               return (
@@ -171,9 +178,12 @@ const PageLayout = ({
                 Для продолжения количество макарон должно равняться 12 шт.
               </div>
               <div className="pageLayout__counter-btns">
-                <button className="pageLayout__counter-btns-btn fw-600 fz-14">
+                <Link
+                  to={"/cart#form-delivery"}
+                  className="pageLayout__counter-btns-btn fw-600 fz-14"
+                >
                   Оформить заказ
-                </button>
+                </Link>
                 <button
                   onClick={handleGoNext}
                   id="assembleMore"

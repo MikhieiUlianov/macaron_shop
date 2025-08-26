@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import Social from "../Social";
+import Social from "../Social/page";
 import {
   setActiveMenu,
   changeActiveTown,

@@ -1,10 +1,11 @@
-import Promo from "../Promo";
-import PagesLinks from "../PagesLinks";
-import Promotion from "../Promotion";
-import Holidays from "../Holidays";
-import PopularSets from "@/components/PopularSets";
-import News from "../News";
-import Steps from "../Steps";
+/* import Promo from "../Promo"; */
+import Promo from "../Promo/page";
+import PagesLinks from "../PagesLinks/page";
+import Promotion from "../Promotion/page";
+import Holidays from "../Holidays/page";
+import PopularSets from "@/components/PopularSets/page";
+import News from "../News/page";
+import Steps from "../Steps/page";
 
 import { Helmet } from "react-helmet";
 const MainPage = () => {

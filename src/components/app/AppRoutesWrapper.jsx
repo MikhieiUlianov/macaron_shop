@@ -1,6 +1,6 @@
-const MainPage = lazy(() => import("@/components/pages/MainPage"));
+const MainPage = lazy(() => import("@/components/pages/MainPageFile"));
 const PopularSetsPage = lazy(() =>
-  import("@/components/pages/PopularSetsPage")
+  import("@/components/pages/PopularSetsPageFile")
 );
 const NewsPage = lazy(() => import("@/components/pages/NewsPageFolder/page"));
 const GuaranteesPage = lazy(() =>
@@ -18,19 +18,21 @@ const ContactsPage = lazy(() =>
 const Page404 = lazy(() => import("@/components/pages/Page404Folder/page"));
 const Policy = lazy(() => import("@/components/pages/PolicyFolder/page"));
 const CatalogDessertsPage = lazy(() =>
-  import("@/components/pages/CatalogDessertsPage")
+  import("@/components/pages/CatalogDessertsPageFile")
 );
-const ProductPage = lazy(() => import("@/components/pages/ProductPage"));
-const CartPage = lazy(() => import("@/components/pages/CartPage"));
-const CorporatePage = lazy(() => import("@/components/pages/CorporatePage"));
+const ProductPage = lazy(() => import("@/components/pages/ProductPageFile"));
+const CartPage = lazy(() => import("@/components/pages/CartPageFile"));
+const CorporatePage = lazy(() =>
+  import("@/components/pages/CorporatePageFile")
+);
 const SuggestionsPage = lazy(() =>
-  import("@/components/pages/SuggestionsPage")
+  import("@/components/pages/SuggestionsPageFile")
 );
-const WeddingPage = lazy(() => import("@/components/pages/WeddingPage"));
-const AssemblePage = lazy(() => import("@/components/pages/AssemblePage"));
-const TastesPage = lazy(() => import("@/components/pages/TastesPage"));
+const WeddingPage = lazy(() => import("@/components/pages/WeddingPageFile"));
+const AssemblePage = lazy(() => import("@/components/pages/AssemblePageFile"));
+const TastesPage = lazy(() => import("@/components/pages/TastesPageFile"));
 const AdditionallyPage = lazy(() =>
-  import("@/components/pages/AdditionallyPage")
+  import("@/components/pages/AdditionallyPageFile")
 );
 
 const AppRoutesWrapper = () => {

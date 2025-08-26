@@ -1,4 +1,4 @@
-import PopularSets from "../PopularSets";
+import PopularSets from "../PopularSets/page";
 
 import { Helmet } from "react-helmet";
 const PopularSetsPage = () => {

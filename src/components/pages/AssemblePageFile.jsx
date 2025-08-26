@@ -1,4 +1,4 @@
-import Assemble from "../Assemble/assemble";
+import Assemble from "../Assemble/page";
 
 import { Helmet } from "react-helmet";
 const AssemblePage = () => {

@@ -1,5 +1,5 @@
-import CatalogDesserts from "../CatalogDesserts";
-import Try from "../Try";
+import CatalogDesserts from "../CatalogDesserts/page";
+import Try from "../Try/page";
 
 import { Helmet } from "react-helmet";
 const CatalogDessertsPage = () => {

@@ -1,6 +1,6 @@
-import ProductInfo from "@/components/ProductInfo";
-import Tabs from "@/components/Tabs";
-import Try from "../Try";
+import ProductInfo from "../ProductInfo/page";
+import Tabs from "@/components/Tabs/page";
+import Try from "../Try/page";
 
 import { Helmet } from "react-helmet";
 const ProductPage = () => {

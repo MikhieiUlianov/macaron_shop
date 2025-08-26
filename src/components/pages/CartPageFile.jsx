@@ -1,5 +1,5 @@
-import Cart from "../cart-folder/Cart/cart";
-import Try from "../Try";
+import Cart from "../cart-folder/Cart/page";
+import Try from "../Try/page";
 
 import { Helmet } from "react-helmet";
 const CartPage = () => {

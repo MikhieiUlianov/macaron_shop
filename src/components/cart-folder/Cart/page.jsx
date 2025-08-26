@@ -8,8 +8,8 @@ import {
 import Section from "@/components/Section";
 import roundSet from "/img/popularSets/roundSet.jpeg";
 import "./cart.scss";
-import CartCounter from "../CartCounter";
-import FormDelivery from "@/components/form-folder/FormDelivery";
+import CartCounter from "../CartCounter/page";
+import FormDelivery from "@/components/form-folder/FormDelivery/page";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state.cart);

@@ -1,7 +1,7 @@
 import Answers from "../Answers/Answers";
-import CompletedOrders from "../CompletedOrders";
-import Corporate from "../corporate";
-import SomePresents from "../SomePresents";
+import CompletedOrders from "../CompletedOrders/page";
+import Corporate from "../corporate/page";
+import SomePresents from "../SomePresents/page";
 import { Helmet } from "react-helmet";
 const CorporatePage = () => {
   return (

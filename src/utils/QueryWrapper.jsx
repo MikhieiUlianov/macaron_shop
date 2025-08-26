@@ -1,5 +1,5 @@
-import Spinner from "@/components/Spinner";
-import ErrorMessage from "@/components/ErrorMessage";
+import Spinner from "@/components/Spinner/page";
+import ErrorMessage from "@/components/ErrorMessage/page";
 
 const QueryWrapper = ({ isLoading, isError, data, children }) => {
   if (isLoading) return <Spinner />;

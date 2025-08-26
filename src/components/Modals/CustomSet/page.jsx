@@ -1,4 +1,4 @@
-import Modal from "..";
+import Modal from "../page";
 import "./customSet.scss";
 import { toggleModal } from "../modalsSlice";
 import { updateCart } from "@/components/cart-folder/Cart/cartSlice";
@@ -83,9 +83,20 @@ const CustomSet = () => {
           >
             Добавить в корзину
           </Link>
-          <button className="customSet__btns-btn fw-600 fz-12">
+          <Link
+            onClick={() =>
+              handleClick({
+                data: {
+                  additionall,
+                  tastes,
+                },
+              })
+            }
+            to={"/cart#form-delivery"}
+            className="customSet__btns-btn fw-600 fz-12"
+          >
             Оформить сейчас
-          </button>
+          </Link>
         </div>
       </div>
     </Modal>
